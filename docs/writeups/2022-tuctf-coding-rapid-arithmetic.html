@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>r98inver's blog | Rapid Arithmetic</title>
+    <link rel="shortcut icon" type="image/png" href="https://r98inver.github.io/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://r98inver.github.io/favicon.ico">
+    <link href="https://r98inver.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="r98inver's blog Full Atom Feed" />
+    <link href="https://r98inver.github.io/feeds/coding.atom.xml" type="application/atom+xml" rel="alternate" title="r98inver's blog Categories Atom Feed" />
+    <link rel="stylesheet" href="https://r98inver.github.io/theme/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="https://r98inver.github.io/theme/css/pygments.css" type="text/css" />
+    <meta name="generator" content="Pelican" />
+    <meta name="description" content="" />
+    <meta name="author" content="r98inver" />
+
+    <meta name="keywords" content="parsing" />
+</head>
+<body>
+    <header>
+        <nav style="overflow: hidden;">
+            <ul>
+                <li><a href="https://r98inver.github.io/">Home</a></li>
+                <li><a href="https://r98inver.github.io/about.html">About Me</a></li>
+                <li><a href="https://r98inver.github.io/writeups">CTF Writeups</a></li>
+            </ul>
+        </nav>
+        <div class="header_box" style="height: 50px">
+        <h1><a href="https://r98inver.github.io/">
+            <image src='' class="avatar" width="50px" /><span class="site_title">r98inver's blog</span>
+            </a></h1></div>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">
+<article class="post">
+    <h1 class="title">
+        <a href="https://r98inver.github.io/writeups/2022-tuctf-coding-rapid-arithmetic.html" rel="bookmark" title="Permanent Link to &quot;Rapid Arithmetic&quot;">Rapid Arithmetic</a>
+    </h1>
+
+    <div class="sum-header">
+        <div class="sum-cat">Category: <span><a href="https://r98inver.github.io/category/coding.html" rel="tag">coding</a><span></div>
+        <div class="sum-tags">Tags:         &nbsp;<a href="https://r98inver.github.io/tag/parsing.html" class="tags">parsing</a>
+</div>
+        <div class="sum-chal" style="margin: 0px;">CTF: <span>tuctf 2022<span></div>
+    </div>
+
+
+    <h2>Solution</h2>
+<p>I solved this challenge together with <a href="https://ctftime.org/user/121116">@vikvdl</a>.</p>
+<p>We are given a netcat endpoint that ask us to solve math operations. After the first one, which was always <code>100x25</code>, the operations immediately became very hard and confused. However, they always consisted in standard operations; hence a simple <code>eval()</code> would solve them.<br>
+After a while the remote server started to send us, together with the operation, also a malicius python script that if passed to <code>eval</code> could scramble our running program; luckily, we checked for that before, so we got an error instead of its exectution. After that, we just skipped all the rows containing <code>exec</code>.<br>
+The next step was to solve operation encoded in natural language. We found a very well written python library for that, called <a href="https://github.com/scrapinghub/number-parser">number-parser</a>. The only problem was that the server passed thousands like <code>one thousand, one hundred</code> and this was parsed as <code>1000 100</code> due to the <code>,</code>. However replacing the comma with an empty space solved the problem.
+After that we got roman numerals, for which we discovered python has a builtin <a href="https://pypi.org/project/roman/">library</a> (why?), and then morse code, potentially hard to parse due to the presence of <code>-</code>. But checking for many points finally did the job.<br>
+The last level was much harder. For a long time, we couldn't figure out what was going on. We keep getting lines like  </p>
+<div class="highlight"><pre><span></span><code><span class="mf">3333</span><span class="w">  </span><span class="mf">44</span><span class="w">  </span><span class="mf">44</span><span class="w"> </span><span class="mf">777777</span><span class="w">  </span><span class="mf">9999</span><span class="w">          </span><span class="mf">3333</span><span class="w">   </span><span class="mf">2222</span><span class="w">   </span><span class="mf">3333</span><span class="w">   </span><span class="mf">2222</span><span class="w"></span>
+</code></pre></div>
+
+<p>Moreover, the script was taking much time to execute due to the huge number of requests to be made to solve the previous level, and every time we missed one of those answer (basically every time) we got kicked out and had to restart, leading to a very few examples. After a while, we figured out that the server message was multiline, looking like</p>
+<div class="highlight"><pre><span></span><code><span class="mf">44</span><span class="w">  </span><span class="mf">44</span><span class="w">  </span><span class="mf">0000</span><span class="w">  </span><span class="mf">44</span><span class="w">  </span><span class="mf">44</span><span class="w">  </span><span class="mf">9999</span><span class="w">          </span><span class="mf">3333</span><span class="w">   </span><span class="mf">8888</span><span class="w">   </span><span class="mf">0000</span><span class="w">   </span><span class="mf">2222</span><span class="w"></span>
+<span class="mf">44</span><span class="w">  </span><span class="mf">44</span><span class="w"> </span><span class="mf">00</span><span class="w">  </span><span class="mf">00</span><span class="w"> </span><span class="mf">44</span><span class="w">  </span><span class="mf">44</span><span class="w"> </span><span class="mf">99</span><span class="w">  </span><span class="mf">99</span><span class="w">        </span><span class="mf">33</span><span class="w">  </span><span class="mf">33</span><span class="w"> </span><span class="mf">88</span><span class="w">  </span><span class="mf">88</span><span class="w"> </span><span class="mf">00</span><span class="w">  </span><span class="mf">00</span><span class="w"> </span><span class="mf">22</span><span class="w">  </span><span class="mf">22</span><span class="w"> </span>
+<span class="mf">444444</span><span class="w"> </span><span class="mf">00</span><span class="w">  </span><span class="mf">00</span><span class="w"> </span><span class="mf">444444</span><span class="w">  </span><span class="mf">99999</span><span class="w">  </span><span class="o">====</span><span class="w">     </span><span class="mf">333</span><span class="w">  </span><span class="mf">8888</span><span class="w">  </span><span class="mf">00</span><span class="w">  </span><span class="mf">00</span><span class="w">    </span><span class="mf">22</span><span class="w">  </span>
+<span class="w">    </span><span class="mf">44</span><span class="w"> </span><span class="mf">00</span><span class="w">  </span><span class="mf">00</span><span class="w">     </span><span class="mf">44</span><span class="w">     </span><span class="mf">99</span><span class="w">        </span><span class="mf">33</span><span class="w">  </span><span class="mf">33</span><span class="w"> </span><span class="mf">88</span><span class="w">  </span><span class="mf">88</span><span class="w"> </span><span class="mf">00</span><span class="w">  </span><span class="mf">00</span><span class="w">   </span><span class="mf">22</span><span class="w">   </span>
+<span class="w">    </span><span class="mf">44</span><span class="w">  </span><span class="mf">0000</span><span class="w">      </span><span class="mf">44</span><span class="w">  </span><span class="mf">9999</span><span class="w">          </span><span class="mf">3333</span><span class="w">   </span><span class="mf">8888</span><span class="w">   </span><span class="mf">0000</span><span class="w">  </span><span class="mf">222222</span><span class="w"></span>
+</code></pre></div>
+
+<p>Parsing it was not trivial, but we noticed that looking only at the third line and replacing <code>00 00</code> with <code>00</code> we had 8 chunks of number plus one or two (the <code>-</code> sometimes appeared before the first number) chunks of sign. After solving that, we finally got the flag.</p>
+<h4>Solve Files</h4>
+<ul>
+<li><a href="https://r98inver.github.io/2022-tuctf/coding-rapid-arithmetic/sol_files/parser.py">parser.py</a></li>
+<li><a href="https://r98inver.github.io/2022-tuctf/coding-rapid-arithmetic/sol_files/solve.py">solve.py</a></li>
+</ul>
+    
+    <br>
+    <div align="center" id="flag" class="flag-toggle" onclick="this.innerHTML='TUCTF{7h3_k1n6_0f_7h3_m47h_c457l3_15_m3_425927}';">
+        Show Flag
+    </div>
+
+    <div class="info">
+        posted by <a href="https://r98inver.github.io/author/r98inver.html">r98inver</a> - 09/12/2022
+    </div>
+</article>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/tcarwash/blue-penguin-dark">Blue Penguin Dark</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+                &middot;
+                <a href="https://r98inver.github.io/feeds/all.atom.xml" rel="alternate">Atom Feed</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

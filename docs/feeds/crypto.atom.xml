@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>r98inver's blog - crypto</title><link href="https://r98inver.github.io/" rel="alternate"></link><link href="https://r98inver.github.io/feeds/crypto.atom.xml" rel="self"></link><id>https://r98inver.github.io/</id><updated>2022-10-01T12:23:10+00:00</updated><entry><title>Vigenere</title><link href="https://r98inver.github.io/writeups/2022-metared2-crypto-vigenere.html" rel="alternate"></link><published>2022-10-01T12:23:10+00:00</published><updated>2022-10-01T12:23:10+00:00</updated><author><name>r98inver</name></author><id>tag:r98inver.github.io,2022-10-01:/writeups/2022-metared2-crypto-vigenere.html</id><summary type="html">&lt;p&gt;We target an alternative Vigenere cipher that becomes a repeated key xor cipher in an unknown language.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Solution&lt;/h2&gt;
+&lt;p&gt;We are targeting an alternative vigenere cipher. The description provides us most of the insights we need to solve it:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the plaintext and the ciphertext are bytes that can go from 0 to 256;&lt;/li&gt;
+&lt;li&gt;the key, however, is composed only by alphabetic chars from &lt;code&gt;a&lt;/code&gt; to &lt;code&gt;z&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;the plaintext is not english, but instead a foreign language that must be detected as a part of the flag.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We have a mix of Vigenere and XOR ciphers vulnerabilities. Of course we need to exploit the fact that the key is only composed by alphabetic characters to obtain the more likely ones. However, since we do not know the plaintext language, character frequencies cannot be used to analyize the key. Instead, we have to rely on the fact that most (but not all) characters of the plaintext will be printable ASCII, which is a standard XOR technique.&lt;br&gt;
+Another important aspect is how the key is encrypted. We are told that the cipher is &lt;em&gt;additive&lt;/em&gt;, but not if it is XOR additive or Vigenere additive. The alphabetic key seems to suggest the second option, which is confirmed after some trials: so for example &lt;code&gt;a&lt;/code&gt; moves the byte values by one, &lt;code&gt;b&lt;/code&gt; by 2 and so on. To decrypt we must hence subtract values corresponding to those letters.&lt;br&gt;
+We are now ready to build the actual decryption algorithm. We are told that the flag will be &lt;code&gt;keylen_key_lang&lt;/code&gt; where &lt;code&gt;lang&lt;/code&gt; is the language of the plaintext. Since we do not now the keylength, we need to bruteforce it in a reasonable range (we choose &lt;code&gt;2-30&lt;/code&gt;). For each possible lenght &lt;code&gt;l&lt;/code&gt;, we split the ciphertext in chunks of length &lt;code&gt;l&lt;/code&gt; and try to decrypt each chunk with any possible letter. In this way for each position we guess the best key bit and than see for which length we get a better overall result. As stated before, for better overall result we mean the resulting plaintext with highest number of ASCII printable characters.&lt;br&gt;
+After some trial and error, we obtain the best result for &lt;code&gt;l=11&lt;/code&gt;. The correspondent key is &lt;code&gt;odiabpcsetf&lt;/code&gt; and the text, which is filled with some random bytes, is detected by Google Translate as Hungarian. This gives us the flag.&lt;/p&gt;
+&lt;h4&gt;Challenge Files&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://r98inver.github.io/2022-metared2/crypto-vigenere/chall_files/criptograma.txt"&gt;critpograma.txt&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Solve Files&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://r98inver.github.io/2022-metared2/crypto-vigenere/sol_files/solve.py"&gt;solve.py&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="crypto"></category><category term="rep key xor"></category></entry></feed>

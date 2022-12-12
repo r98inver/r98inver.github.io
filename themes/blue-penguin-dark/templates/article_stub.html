@@ -1,0 +1,43 @@
+
+<article class="post">
+    {% if article.title %}
+    <h1 class="title">
+        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permanent Link to &quot;{{ article.title|striptags }}&quot;">{{ article.title }}</a>
+    </h1>
+    {% endif %}
+
+    <div class="sum-header">
+        {% if article.category %}
+        <div class="sum-cat">Category: <span><a href="{{ SITEURL }}/{{ article.category.url }}" rel="tag">{{ article.category }}</a><span></div>
+        {% endif %}
+        {% if article.tags %}
+        <div class="sum-tags">Tags: {% for t in article.tags %}
+        &nbsp;<a href="{{ SITEURL }}/{{ t.url }}" class="tags{% if tag and tag.name == t.name %} selected{% endif %}">{{ t }}</a>
+        {% endfor %}</div>
+        {% endif %}
+        {% if article.ctf %}
+        <div class="sum-chal" style="margin: 0px;">CTF: <span>{{ article.ctf }}<span></div>
+        {% endif %}
+    </div>
+
+    {% if article.description %}
+    <h2>Description</h2>
+    {{ article.description }}
+    {% endif %}
+
+    {{ article.content }}
+    
+    <br>
+    <div align="center" id="flag" class="flag-toggle" onclick="this.innerHTML='{{article.flag}}';">
+        Show Flag
+    </div>
+
+    <div class="info">
+        posted by <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a> - {{ article.date.strftime("%d/%m/%Y") }}
+    </div>
+	{% if articles_page and DISQUS_SITENAME %}
+	<a href="{{ SITEURL }}/{{ article.url }}#disqus_thread">Click to read and post comments</a>
+	{% else %}
+	{% include "disqus.html" %}
+	{% endif %}
+</article>

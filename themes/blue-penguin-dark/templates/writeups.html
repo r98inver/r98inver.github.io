@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %} CTF Writeups {% endblock %}
+
+{% block content %}
+
+
+<div class="page">
+  <h1 id="writeups">CTF Writeups</h1>
+  <p>I enjoy playing CTFs, and here are listed some of my favourite writeups. They are grouped by category and tags.</p> 
+  <p>I'm a member of <a href="https://ctftime.org/team/90599">Team Pitucci</a>, a team some friends and I created in Pavia with no experience about cybersecurity, and I recently joined <a href="https://www.stellarvector.be/">StellarVector</a>, the university team of KU Leuven. Check out the respective websites for more writeups and content.</p>
+
+  <h3>Writeups by category</h3>
+  <div>
+    <ul class="list">
+      {% for category, articles in categories|sort %}
+      <li>
+        <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a> ({{ articles|count }})
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <h3>Writeups by tag</h3>
+  <div>
+    <ul class="list">
+      {% for tag, articles in tags|sort %}
+      <li>
+        <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <ul>
+
+</div>
+{% endblock %}

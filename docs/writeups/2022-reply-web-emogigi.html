@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>r98inver's blog | EmoGigi</title>
+    <link rel="shortcut icon" type="image/png" href="https://r98inver.github.io/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://r98inver.github.io/favicon.ico">
+    <link href="https://r98inver.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="r98inver's blog Full Atom Feed" />
+    <link href="https://r98inver.github.io/feeds/web.atom.xml" type="application/atom+xml" rel="alternate" title="r98inver's blog Categories Atom Feed" />
+    <link rel="stylesheet" href="https://r98inver.github.io/theme/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="https://r98inver.github.io/theme/css/pygments.css" type="text/css" />
+    <meta name="generator" content="Pelican" />
+    <meta name="description" content="" />
+    <meta name="author" content="r98inver" />
+
+    <meta name="keywords" content="sql injection,unicode" />
+</head>
+<body>
+    <header>
+        <nav style="overflow: hidden;">
+            <ul>
+                <li><a href="https://r98inver.github.io/">Home</a></li>
+                <li><a href="https://r98inver.github.io/about.html">About Me</a></li>
+                <li><a href="https://r98inver.github.io/writeups">CTF Writeups</a></li>
+            </ul>
+        </nav>
+        <div class="header_box" style="height: 50px">
+        <h1><a href="https://r98inver.github.io/">
+            <image src='' class="avatar" width="50px" /><span class="site_title">r98inver's blog</span>
+            </a></h1></div>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">
+<article class="post">
+    <h1 class="title">
+        <a href="https://r98inver.github.io/writeups/2022-reply-web-emogigi.html" rel="bookmark" title="Permanent Link to &quot;EmoGigi&quot;">EmoGigi</a>
+    </h1>
+
+    <div class="sum-header">
+        <div class="sum-cat">Category: <span><a href="https://r98inver.github.io/category/web.html" rel="tag">web</a><span></div>
+        <div class="sum-tags">Tags:         &nbsp;<a href="https://r98inver.github.io/tag/sql-injection.html" class="tags">sql injection</a>
+        &nbsp;<a href="https://r98inver.github.io/tag/unicode.html" class="tags">unicode</a>
+</div>
+        <div class="sum-chal" style="margin: 0px;">CTF: <span>reply 2022<span></div>
+    </div>
+
+
+    <h2>Solution</h2>
+<p>I solved this challenge together whit <a href="https://ctftime.org/user/145398">@Teuler27</a>.<br>
+The web page of the challenge consists in a container showing a lot of emoji, divided in custom categories; they can be filtered using an <em>Emoji Search Box</em> which immediately suggests a SQL Injection. However, if we search for standard SQL payloads like <code>'</code>, <code>SELECT</code> or <code>WHERE</code> into the box, instead of emoji categories we get a banner with a twisting <em>questioning hand</em> emoji saying
+<img alt="Photo" src="https://r98inver.github.io/writeups/chall_files/marcell.png"></p>
+<p>We are also provided a leak of the source code in <code>Message.txt</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">search</span><span class="p">():</span>
+    <span class="c1"># [... SNIP ...] Init the variables here</span>
+
+    <span class="c1"># Custom SQL filter</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">sqlfilter</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;query&#39;</span><span class="p">])</span>
+
+    <span class="c1"># [... SNIP ...]</span>
+
+    <span class="k">if</span> <span class="n">query</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># [... SNIP ...] Return an error here</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Normalize weird chars here</span>
+        <span class="n">norm</span> <span class="o">=</span> <span class="n">unicodedata</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="s2">&quot;NFKD&quot;</span><span class="p">,</span> <span class="n">query</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="s1">&#39;ignore&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Custom HTML filter</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="n">htmlfilter</span><span class="p">(</span><span class="n">norm</span><span class="p">)</span>
+
+        <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;./emoji.db&#39;</span><span class="p">)</span>
+        <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+        <span class="c1"># Prefix:   f09f90</span>
+        <span class="c1"># Range:    80;c0</span>
+        <span class="c1"># Category: animals</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT prefix,range,category,id FROM emoji WHERE category like &#39;%&quot;</span> <span class="o">+</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;%&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+        <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="c1"># No Results</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">index</span><span class="p">()</span>
+
+        <span class="c1"># [... SNIP ...] Build the results table here</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+            <span class="n">rng</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+            <span class="n">emoji</span> <span class="o">+=</span> <span class="s1">&#39;&lt;div class=&quot;category&quot;&gt;&lt;div id=&quot;lh&quot;&gt;&lt;/div&gt;&#39;</span> <span class="o">+</span> <span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;&lt;div id=&quot;rh&quot;&gt;&lt;/div&gt;&lt;/div&gt;&#39;</span>
+            <span class="n">emoji</span> <span class="o">+=</span> <span class="n">emoji_gen</span><span class="p">(</span><span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">rng</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">16</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">rng</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">16</span><span class="p">))</span>
+
+        <span class="c1"># [... SNIP ...]</span>
+
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">,</span> <span class="n">emoji</span><span class="o">=</span><span class="n">emoji</span><span class="p">,</span> <span class="n">pages</span><span class="o">=</span><span class="n">pages</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">),</span> <span class="mi">200</span>
+</code></pre></div>
+
+<p>Probably, <code>sqlfilter()</code> detects our payloads and returns the <em>Marcell*!</em> alert. But the vulerability here is that the string is unicode normalized <em>after</em> the SQL filter. This suggests <a href="https://book.hacktricks.xyz/pentesting-web/unicode-injection">Unicode Injection</a>. Our suspects were enforced by the fact that we found online many emoji payloads for SQL injection.<br>
+So we tried to inject unicode payloads, like <code>\uff07</code> for <code>'</code> and <code>\uff08</code> for <code>(</code>. They passed the <code>sqlfilter()</code> function, but when normalized in the second step allowed us to execute SQL injection. Encoding literal SQL commands was even easier, since letters with accents are normalized, so for example <code>SèLECT</code> was a valid command passing the filter.<br>
+From this point, dump the whole database was quite straightforward. From the leaked message we know that each emoji query asks for four values, <code>prefix</code>,<code>range</code>,<code>category</code> and <code>id</code>. While simple operations are performed on <code>prefix</code>,<code>range</code> and <code>id</code>, <code>category</code> is displayed unchanged. So that's our endpoint for displaying the db dump. Moreover, we know sample values for each of the three other columns. Finally notice that the <code>category</code> field controls the header of the page, so website pagination allowed us to recover multiple results at once. The query we performed, in order, was:</p>
+<ul>
+<li><code>xxx\uff07 uniòn sèlect \uff07f09f90\uff07,\uff0780;c0\uff07,name,1 FRòM sqlite_schema WHèRè name likè \uff07%</code>, from which we found a table <code>R3PLYCH4LL3NG3FL4G</code>;</li>
+<li><code>xxx\uff07 uniòn sèlect \uff07f09f90\uff07,\uff0780;c0\uff07,name,1 FRòM PRAGMA_TABLE_INFO\uff08\uff07R3PLYCH4LL3NG3FL4G\uff07\uff09 WHèRè name likè \uff07%</code>, from which we discovered that our table has only one column, <code>value</code>;</li>
+<li>finally, <code>xxx\uff07 uniòn sèlect \uff07f09f90\uff07,\uff0780;c0\uff07,value,1 FRòM R3PLYCH4LL3NG3FL4G WHèRè value likè \uff07%</code> gave us the flag.</li>
+</ul>
+<h4>Challenge Files</h4>
+<ul>
+<li><a href="https://r98inver.github.io/2022-reply/web-emogigi/chall_files/Message.txt">Message.txt</a></li>
+</ul>
+<h4>Solve Files</h4>
+<ul>
+<li><a href="https://r98inver.github.io/2022-reply/web-emogigi/sol_files/solve.py">solve.py</a></li>
+</ul>
+    
+    <br>
+    <div align="center" id="flag" class="flag-toggle" onclick="this.innerHTML='{FLG:O0O0OP5_1_H4V3_B33N_PWN3D_(54DF4C3)!}';">
+        Show Flag
+    </div>
+
+    <div class="info">
+        posted by <a href="https://r98inver.github.io/author/r98inver.html">r98inver</a> - 08/12/2022
+    </div>
+</article>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/tcarwash/blue-penguin-dark">Blue Penguin Dark</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+                &middot;
+                <a href="https://r98inver.github.io/feeds/all.atom.xml" rel="alternate">Atom Feed</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

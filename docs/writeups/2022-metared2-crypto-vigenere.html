@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>r98inver's blog | Vigenere</title>
+    <link rel="shortcut icon" type="image/png" href="https://r98inver.github.io/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://r98inver.github.io/favicon.ico">
+    <link href="https://r98inver.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="r98inver's blog Full Atom Feed" />
+    <link href="https://r98inver.github.io/feeds/crypto.atom.xml" type="application/atom+xml" rel="alternate" title="r98inver's blog Categories Atom Feed" />
+    <link rel="stylesheet" href="https://r98inver.github.io/theme/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="https://r98inver.github.io/theme/css/pygments.css" type="text/css" />
+    <meta name="generator" content="Pelican" />
+    <meta name="description" content="" />
+    <meta name="author" content="r98inver" />
+
+    <meta name="keywords" content="rep key xor" />
+</head>
+<body>
+    <header>
+        <nav style="overflow: hidden;">
+            <ul>
+                <li><a href="https://r98inver.github.io/">Home</a></li>
+                <li><a href="https://r98inver.github.io/about.html">About Me</a></li>
+                <li><a href="https://r98inver.github.io/writeups">CTF Writeups</a></li>
+            </ul>
+        </nav>
+        <div class="header_box" style="height: 50px">
+        <h1><a href="https://r98inver.github.io/">
+            <image src='' class="avatar" width="50px" /><span class="site_title">r98inver's blog</span>
+            </a></h1></div>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">
+<article class="post">
+    <h1 class="title">
+        <a href="https://r98inver.github.io/writeups/2022-metared2-crypto-vigenere.html" rel="bookmark" title="Permanent Link to &quot;Vigenere&quot;">Vigenere</a>
+    </h1>
+
+    <div class="sum-header">
+        <div class="sum-cat">Category: <span><a href="https://r98inver.github.io/category/crypto.html" rel="tag">crypto</a><span></div>
+        <div class="sum-tags">Tags:         &nbsp;<a href="https://r98inver.github.io/tag/rep-key-xor.html" class="tags">rep key xor</a>
+</div>
+        <div class="sum-chal" style="margin: 0px;">CTF: <span>metared2 2022<span></div>
+    </div>
+
+
+    <h2>Solution</h2>
+<p>We are targeting an alternative vigenere cipher. The description provides us most of the insights we need to solve it:</p>
+<ul>
+<li>the plaintext and the ciphertext are bytes that can go from 0 to 256;</li>
+<li>the key, however, is composed only by alphabetic chars from <code>a</code> to <code>z</code>;</li>
+<li>the plaintext is not english, but instead a foreign language that must be detected as a part of the flag.</li>
+</ul>
+<p>We have a mix of Vigenere and XOR ciphers vulnerabilities. Of course we need to exploit the fact that the key is only composed by alphabetic characters to obtain the more likely ones. However, since we do not know the plaintext language, character frequencies cannot be used to analyize the key. Instead, we have to rely on the fact that most (but not all) characters of the plaintext will be printable ASCII, which is a standard XOR technique.<br>
+Another important aspect is how the key is encrypted. We are told that the cipher is <em>additive</em>, but not if it is XOR additive or Vigenere additive. The alphabetic key seems to suggest the second option, which is confirmed after some trials: so for example <code>a</code> moves the byte values by one, <code>b</code> by 2 and so on. To decrypt we must hence subtract values corresponding to those letters.<br>
+We are now ready to build the actual decryption algorithm. We are told that the flag will be <code>keylen_key_lang</code> where <code>lang</code> is the language of the plaintext. Since we do not now the keylength, we need to bruteforce it in a reasonable range (we choose <code>2-30</code>). For each possible lenght <code>l</code>, we split the ciphertext in chunks of length <code>l</code> and try to decrypt each chunk with any possible letter. In this way for each position we guess the best key bit and than see for which length we get a better overall result. As stated before, for better overall result we mean the resulting plaintext with highest number of ASCII printable characters.<br>
+After some trial and error, we obtain the best result for <code>l=11</code>. The correspondent key is <code>odiabpcsetf</code> and the text, which is filled with some random bytes, is detected by Google Translate as Hungarian. This gives us the flag.</p>
+<h4>Challenge Files</h4>
+<ul>
+<li><a href="https://r98inver.github.io/2022-metared2/crypto-vigenere/chall_files/criptograma.txt">critpograma.txt</a></li>
+</ul>
+<h4>Solve Files</h4>
+<ul>
+<li><a href="https://r98inver.github.io/2022-metared2/crypto-vigenere/sol_files/solve.py">solve.py</a></li>
+</ul>
+    
+    <br>
+    <div align="center" id="flag" class="flag-toggle" onclick="this.innerHTML='CTFUA{11_odiabpcsetf_Hungarian}';">
+        Show Flag
+    </div>
+
+    <div class="info">
+        posted by <a href="https://r98inver.github.io/author/r98inver.html">r98inver</a> - 01/10/2022
+    </div>
+</article>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/tcarwash/blue-penguin-dark">Blue Penguin Dark</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+                &middot;
+                <a href="https://r98inver.github.io/feeds/all.atom.xml" rel="alternate">Atom Feed</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>
