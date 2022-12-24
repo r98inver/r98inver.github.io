@@ -8,7 +8,7 @@ Summary: [SUMMARY HERE]
 Ctf: {{chall_ctf}}
 Flag: {{chall_flag}}
 Description: {{chall_desc}}
-Status: draft #published
+Status: published
 ---
 
 ## Solution

@@ -237,7 +237,7 @@ thead {
     margin-bottom: 1.5em;
     margin-left: 160px;
 }
-.post p {
+.post p, ol{
     text-align: justify;
 }
 

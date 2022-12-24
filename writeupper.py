@@ -100,6 +100,8 @@ if __name__ == '__main__':
 
 		if os.path.isfile(f'{chall_path_from}/desc.txt'):
 			desc = open(f'{chall_path_from}/desc.txt').read().strip()
+		elif os.path.isfile(f'{chall_path_from}/description.txt'):
+			desc = open(f'{chall_path_from}/description.txt').read().strip() 
 		else:
 			desc = '[DESCRIPTION HERE]'
 

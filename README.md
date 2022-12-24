@@ -30,7 +30,3 @@ The prupose of the file `writeupper.py` is to take a challenge folder and automa
 - `chmod +x writeupper.py`
 - Configure the values inside
 - Then just run it
-
-#### Ideas
-
-- generates content as hidden
