@@ -63,6 +63,7 @@ while True:
 			cur_bet = 10
 		log.info(f'{cur_bet = }')
 
+	# https://www.leviathansecurity.com/media/attacking-gos-lagged-fibonacci-generator
 	exp = (ls[-273]+ls[-607])%2022
 	res, val = bet(myuser, cur_bet, exp, r)
 	log.info(f'{exp = } {val = } {res = }')
