@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>r98inver's blog | Casino2</title>
+    <link rel="shortcut icon" type="image/png" href="https://r98inver.github.io/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://r98inver.github.io/favicon.ico">
+    <link href="https://r98inver.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="r98inver's blog Full Atom Feed" />
+    <link href="https://r98inver.github.io/feeds/crypto.atom.xml" type="application/atom+xml" rel="alternate" title="r98inver's blog Categories Atom Feed" />
+    <link rel="stylesheet" href="https://r98inver.github.io/theme/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="https://r98inver.github.io/theme/css/pygments.css" type="text/css" />
+    <meta name="generator" content="Pelican" />
+    <meta name="description" content="" />
+    <meta name="author" content="r98inver" />
+
+    <meta name="keywords" content="prng,golang" />
+</head>
+<body>
+    <header>
+        <nav style="overflow: hidden;">
+            <ul>
+                <li><a href="https://r98inver.github.io/">Home</a></li>
+                <li><a href="https://r98inver.github.io/about.html">About Me</a></li>
+                <li><a href="https://r98inver.github.io/writeups">CTF Writeups</a></li>
+            </ul>
+        </nav>
+        <div class="header_box" style="height: 50px">
+        <h1><a href="https://r98inver.github.io/">
+            <image src='' class="avatar" width="50px" /><span class="site_title">r98inver's blog</span>
+            </a></h1></div>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">
+<article class="post">
+    <h1 class="title">
+        <a href="https://r98inver.github.io/writeups/2023-tetctf-crypto-casino2.html" rel="bookmark" title="Permanent Link to &quot;Casino2&quot;">Casino2</a>
+    </h1>
+
+    <div class="sum-header">
+        <div class="sum-cat">Category: <span><a href="https://r98inver.github.io/category/crypto.html" rel="tag">crypto</a><span></div>
+        <div class="sum-tags">Tags:         &nbsp;<a href="https://r98inver.github.io/tag/prng.html" class="tags">prng</a>
+        &nbsp;<a href="https://r98inver.github.io/tag/golang.html" class="tags">golang</a>
+</div>
+        <div class="sum-chal" style="margin: 0px;">CTF: <span>tetctf 2023<span></div>
+    </div>
+
+
+    <h2>Solution</h2>
+<p>This challenge is the follow up of <code>Casino</code>, where we have a casino implemented in <code>golang</code> and we have to make bets in order to earn money and win the flag. The structure is quite simple, and we are provided some <code>JSON</code> APIs to play:</p>
+<ul>
+<li><code>{'recipient':'Casino', 'command':'Register', 'username':username}</code> registers a user; this is achieved in my code via the function <code>register</code>;</li>
+<li><code>{'recipient':'Casino', 'command':'ShowBalanceWithProof', 'username':username}</code> gives us the balance, plus a proof of the validity of that balance that we have to exibit in order to obtain the flag once we have enough money; this is done via the <code>showbalance</code> function;</li>
+<li><code>{'recipient':'FlagSeller', 'command':'PrintFlag', 'balance':balance, 'proof_data':proof}</code>, where <code>balance</code> and <code>proof</code> are the result of <code>showbalance</code>, gives us the flag; by reading the function in <code>flag_seller.go</code>, we notice that this call shows us only the first <code>l</code> characters of the flag, where <code>l</code> is the bitlength of our balance divided by <code>8</code>;</li>
+<li>finally, <code>{'recipient':'Casino', 'command':'Bet', 'username':username, 'amount':amount, 'n':n}</code> allows us to bet on one number <code>n</code>; the casino then picks a random number between <code>0</code> and <code>2023</code>, and if we guessed correctly, we are given back our bet multiplied by <code>2023</code>, otherwise we loose it; notably, if we make a mistake we are returned the correct number.</li>
+</ul>
+<p>We start from a balance of <code>2023</code> (let's say they are €). The <code>Casino</code> challenge was more of an intrduction, since negative bets are allowed. You can hence earn an illimited ammount of money while losing, and quickly buy the flag. However, this bug is fixed in <code>Casino2</code>. This means that we have to actually break the casino. <br>
+The random number is generated using the builtin golang function <code>rand.Intn(2023)</code>, which is seeded at the startup via <code>rand.Seed(int64(binary.LittleEndian.Uint64(tmp)))</code>. The <code>tmp</code> vector is initialized using <code>cryptorand.Read</code>, which accordingly to the official golang documentation is cryptographically secure. Breaking the seed is hence not an option. We have then to understand how <code>rand.Intn</code> works. This was a very hard step, since I never used golang before (hence I tried to avoid reading the source code, regarding it as the last step) and I didn't find a lot of docs online. After some useless research, including ChatGPT trying to convince me it was a <code>MersenneTwister</code> citing some inexistent blogs, I found <a href="https://www.leviathansecurity.com/media/attacking-gos-lagged-fibonacci-generator">this post</a> affirming that <code>rand</code> is implemented in golang as a <strong>Lagged Fibonacci Generator</strong> with equation</p>
+<div class="highlight"><pre><span></span><code>x<span class="nb">_</span>n = (x<span class="nb">_{</span>n-273<span class="nb">}</span> + x<span class="nb">_{</span>n-607<span class="nb">}</span>) mod (2<span class="nb">^{</span>63<span class="nb">}</span>-1).
+</code></pre></div>
+
+<p>This means that we have no control on the first <code>607</code> numbers, which we can afford by betting <code>1€</code> each time and spending <code>607€</code> in total, while recording those numbers. After that, we can use the numbers we stored to compute the upcoming ones and win money. <br>
+I implemented this simple formula, and the result was promising: even if we do not have a complete control of the generator, since we are given outputs <code>mod 2023</code> while the exact number are computed <code>mod 2^63 - 1</code>, we have a good winning rate, say <code>1/5</code>. The fact that on a win our bet is multiplied by <code>2023</code> clearly makes it a winning game, but this is not enough. If we keep betting, for example, <code>1€</code> each time, we end up earning about <code>2000€</code> every 5 bets. However, in order to get the flag, we need a balance of <code>2^(8*L)</code> where <code>L</code> is the legnth of the flag, something we clearly can't achieve in a reasonable time in this way. We need a big amount to be multiplied by <code>2023</code> to make our balance grow up quickly, but not too big, because if for some reason we miss some bets consecutively, we do not want to run out of money. So the final algorithm was:</p>
+<ul>
+<li>fix a bet <code>b</code> as <code>1/10</code> of the actual balance;</li>
+<li>after a win, check for the flag; if we have it we can break, otherwise restart;</li>
+<li>after a lose, increment a counter but keep betting <code>b</code>; when the counter hits <code>9</code>, start again computing a new bet.</li>
+</ul>
+<p>On top of that, I added a treshold of <code>5000€</code> below wich only <code>1€</code> bets are allowed due to some rounding problems. It was very easy to reach anyway. This algorithm gives us the flag very quickly (considering that a big amount of time was spent on storing the first <code>607</code> numbers). The reason why it's winning is that every time we win a bet, our budget gets multiplied by <code>~200</code>. Moreover, since we have a winnig rate around <code>1/5</code>, in <code>9</code> bets we often win. If we loose, anyway, our budget is divided only by <code>10</code>.</p>
+<h3>Challenge Files</h3>
+<ul>
+<li><a href="https://r98inver.github.io/2023-tetctf/crypto-casino2/chall_files/casino.go">casino.go</a></li>
+<li><a href="https://r98inver.github.io/2023-tetctf/crypto-casino2/chall_files/main.go">main.go</a></li>
+<li><a href="https://r98inver.github.io/2023-tetctf/crypto-casino2/chall_files/flag_seller.go">flag_seller.go</a></li>
+</ul>
+<h3>Solve Files</h3>
+<ul>
+<li><a href="https://r98inver.github.io/2023-tetctf/crypto-casino2/sol_files/solve.py">solve.py</a></li>
+</ul>
+    
+    <br>
+    <div align="center" id="flag" class="flag-toggle" onclick="this.innerHTML='TetCTF{______l3ft_0r_r1ght_0r_b0th?______}';">
+        Show Flag
+    </div>
+
+    <div class="info">
+        posted by <a href="https://r98inver.github.io/author/r98inver.html">r98inver</a> - 02/01/2023
+    </div>
+</article>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/tcarwash/blue-penguin-dark">Blue Penguin Dark</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+                &middot;
+                <a href="https://r98inver.github.io/feeds/all.atom.xml" rel="alternate">Atom Feed</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

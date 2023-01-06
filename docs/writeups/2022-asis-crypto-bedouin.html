@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>r98inver's blog | Bedouin</title>
+    <link rel="shortcut icon" type="image/png" href="https://r98inver.github.io/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://r98inver.github.io/favicon.ico">
+    <link href="https://r98inver.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="r98inver's blog Full Atom Feed" />
+    <link href="https://r98inver.github.io/feeds/crypto.atom.xml" type="application/atom+xml" rel="alternate" title="r98inver's blog Categories Atom Feed" />
+    <link rel="stylesheet" href="https://r98inver.github.io/theme/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="https://r98inver.github.io/theme/css/pygments.css" type="text/css" />
+    <meta name="generator" content="Pelican" />
+    <meta name="description" content="" />
+    <meta name="author" content="r98inver" />
+
+    <meta name="keywords" content="rsa" />
+    <meta name="description" content="In the bedouin era, trying to survive required a lot of searching. But in today's life, human intelligence has ended this vast search." />
+</head>
+<body>
+    <header>
+        <nav style="overflow: hidden;">
+            <ul>
+                <li><a href="https://r98inver.github.io/">Home</a></li>
+                <li><a href="https://r98inver.github.io/about.html">About Me</a></li>
+                <li><a href="https://r98inver.github.io/writeups">CTF Writeups</a></li>
+            </ul>
+        </nav>
+        <div class="header_box" style="height: 50px">
+        <h1><a href="https://r98inver.github.io/">
+            <image src='' class="avatar" width="50px" /><span class="site_title">r98inver's blog</span>
+            </a></h1></div>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">
+<article class="post">
+    <h1 class="title">
+        <a href="https://r98inver.github.io/writeups/2022-asis-crypto-bedouin.html" rel="bookmark" title="Permanent Link to &quot;Bedouin&quot;">Bedouin</a>
+    </h1>
+
+    <div class="sum-header">
+        <div class="sum-cat">Category: <span><a href="https://r98inver.github.io/category/crypto.html" rel="tag">crypto</a><span></div>
+        <div class="sum-tags">Tags:         &nbsp;<a href="https://r98inver.github.io/tag/rsa.html" class="tags">rsa</a>
+</div>
+        <div class="sum-chal" style="margin: 0px;">CTF: <span>asis 2022<span></div>
+    </div>
+
+    <h2>Description</h2>
+    In the bedouin era, trying to survive required a lot of searching. But in today's life, human intelligence has ended this vast search.
+
+    <h2>Solution</h2>
+<p>This is a very custom RSA challenge, in which all the components are implemented in an unusual way and must hence be inspected. First of all, <code>e</code> is not fixed nor given to us. Instead, it is computed as the inverse of <code>d</code>, which is given by <code>1 ^ l ** nbit &lt;&lt; 3 ** 3</code> where <code>l</code> and <code>nbit</code> are two unknown values. The same two values are involved in the <code>genbed</code> function, that consists in a few steps:</p>
+<ol>
+<li>a prime number <code>zo</code> of <code>nbit</code> bits is generated and then converted in its binary form;</li>
+<li>the string obtained is then repeated <code>l</code> times and a <code>1</code> is added at the end;</li>
+<li>if the string obtained, <em>seen as an integer</em>, is a prime number, it is returned.</li>
+</ol>
+<p>The same process is used to generate both <code>p</code> and <code>q</code>, that ends up being prime number made by a repeated pattern of zeroes and ones. We are then given <code>n = p*q</code>, which is a <code>2047</code>-bit number, and the encrypted message <code>c = m^e mod n</code>. <br>
+The easiest way to solve the challenge is to actually determine <code>d</code>, since then <code>c^d = m mod n</code> will give us the flag. To do so, we must determine <code>l</code> and <code>nbits</code>, and we have a lot of information to brutforce them. Notice that, given <code>l</code> and <code>nbits</code>, both <code>p</code> and <code>q</code> must be <code>l*nbits</code> digit numbers, made only by <code>1</code> and <code>0</code>; hence it holds <code>11...1 &gt;= p,q &gt;= 10...0</code>. For every pair of values we can then compute the highest and lowest possible values of <code>n</code>, namely <code>11...1^2</code> and <code>10...0^2</code>, and their respective number of bits; <code>2047</code> must then lie between those values. This happens for only 12 pairs of <code>(nbits, l)</code> and trying to use each of them to generate <code>d</code> finally gives us the flag.</p>
+<h3>Challenge Files</h3>
+<ul>
+<li><a href="https://r98inver.github.io/2022-asis/crypto-bedouin/chall_files/output.txt">output.txt</a></li>
+<li><a href="https://r98inver.github.io/2022-asis/crypto-bedouin/chall_files/bedouin.py">bedouin.py</a></li>
+</ul>
+<h3>Solve Files</h3>
+<ul>
+<li><a href="https://r98inver.github.io/2022-asis/crypto-bedouin/sol_files/solve.py">solve.py</a></li>
+</ul>
+    
+    <br>
+    <div align="center" id="flag" class="flag-toggle" onclick="this.innerHTML='ASIS{B48y_CrYpT0_4_WaRm_Up_N3veR_TrU57_yOuR_3yEs!}';">
+        Show Flag
+    </div>
+
+    <div class="info">
+        posted by <a href="https://r98inver.github.io/author/r98inver.html">r98inver</a> - 02/01/2023
+    </div>
+</article>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/tcarwash/blue-penguin-dark">Blue Penguin Dark</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+                &middot;
+                <a href="https://r98inver.github.io/feeds/all.atom.xml" rel="alternate">Atom Feed</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>
