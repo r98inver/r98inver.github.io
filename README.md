@@ -2,7 +2,7 @@
 
 This project is built using [Pelican](https://docs.getpelican.com/en/latest/index.html), a python based static site generator.
 
-The site is served on [r98inver.github.io](r98inver.github.io).
+The site is served on [htpps://r98inver.github.io](r98inver.github.io).
 
 ### Build
 
