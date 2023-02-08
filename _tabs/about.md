@@ -2,21 +2,49 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
+toc: true
 ---
 
-I'm currently a *perfectioning student* at [KU Leuven](https://www.kuleuven.be/kuleuven/). I started my internship in October 2022 and I'm ending it in April 2023, for a total of 6 months. I'm supervised by [Daniele Taufer](https://sites.google.com/view/danieletaufer) in the research group of Prof. [Fatemeh Mohammadi](https://www.fatemehmohammadi.com/). I'm focusing on Elliptic Curves defined over local rings and their potential applications.  
-My main interests are computational algebra and number theory, and discrete mathematics in general. I also like to investigate how these concepts arise from concrete problems in cryptography and other areas.  
-More information about my academic career and working experiences can be found in my [CV](/assets/data/cv.pdf).
+Hi! My name is Riccardo Invernizzi and I'm currently a *perfectioning student* at KU Leuven. I'm supervised by [D. Taufer](https://sites.google.com/view/danieletaufer) in the research group of Prof. [F. Mohammadi](https://www.fatemehmohammadi.com/).   
+I am interested in number theory, combinatorics and polynomial systems both from theoretical and algorithmic pureviews.  
+
+Detailed information about my academic career and working experiences can be found in my [CV](/assets/data/cv.pdf). The most important points are summarized below.  
+
+I also enjoy playing coding competition of various kind, mainly CTF's and competitive programming. Some challenge writeups can be found in this website. This is not meant to be a professional blog, but rather an archive of problems that I found interesting or code that may be useful in the future. However, feel free to read them and give feedbacks and suggestions.
+
+## Reach me
+
+- Email: `name.surname@student.kuleuven.be`
+- ORCiD: [0000-0002-2271-6822](https://orcid.org/0000-0002-2271-6822)
+- [Google Scholar](https://scholar.google.com/citations?user=tJQkJIUAAAAJ&hl=en)
+- [arxiv](https://arxiv.org/a/invernizzi_r_1.html)
+- GitHub: [r98inver](https://github.com/r98inver)
+- GitLab: [r98inver](https://gitlab.com/r98inver) (mostly used for private repositories)
+
+## Publications
+
+- [Preprint] [Multiplication polynomials for elliptic curves over finite local rings](https://arxiv.org/abs/2302.03650), with D. Taufer
+- ['I See Something You Don't See'. A Computational Analysis of the Digital Services Act and the Digital Markets Act](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3780938), *vol 6, Stanford Computational Antitrust, 2021*, with F. Di Porto, T. Grote and G. Volpi
+- [Artificial Intelligence and Competition Law. A Computational Analysis of the DMA and DSA](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3929335), *Concurrences, 3 (2021)*, with F. Di Porto, T. Grote and G. Volpi
+
+
+## Talks
+
+- [04/23 - Workshop] *TBD* at [Tensors: geometry and applications](https://sites.google.com/view/reading-seminar-tensors-2023/home), KU Leuven
+- [02/23 - Workshop] ***Multiplication polynomials over finite local rings*** at [Solving Polynomial Systems](https://sites.google.com/view/solvingpolynomialsystems/home), KU Leuven
+
 
 ## Academic Career
 
-I earned my Bachelor's degree in Mathematics at University of Pavia, with a final grade of 110/110 cum laude. My thesis, *Asymptotic Results for Goldbach's Conjecture*, was supervised by Prof. [Alberto Canonaco](https://mate.unipv.it/canonaco/). It was focused on the circle method and how it has been used to provide asymptotical verification of the Goldbach's Conjecture and its variants.  
-I earned my Master's degree in Mathematics at University of Pavia (110/110 cum laude). My thesis, *On the automorphism groups of certain radical rings with application to cryptography*, was supervised by Prof. [Alberto Canonaco](https://mate.unipv.it/canonaco/) and co-supervised by [Marco Calderini](https://webapps.unitn.it/du/it/Persona/PER0127965/Didattica). In this work I focused on the study of alternative sum operations acting on finite fields, and how those sums can be exploited to empower differential cryptanalysis on block ciphers.  
-I'm a student of Institute of Advanced Studies IUSS in Pavia. I was conferred a place through national exam‑based competition, and attended high level courses and exams. I also had to take at least one course per year not belonging to my area (science and technology). I expect to graduate in May 2023, and my parallel degree will be equivalent to a II Level Master.  
-In the months of July and September 2022 I've been on a research internship at TUM, supervised by [Violetta Weger](https://user.math.uzh.ch/weger/) in the reserach group of [Antonia Wachter-Zeh](https://www.ce.cit.tum.de/en/lnt/people/professors/wachter-zeh/). I focused on the study of Minimal Lee-Metric Codes defined over rings.  
+- Research Internship (2022-present) at KU Leuven; supervisor: [D. Taufer](https://sites.google.com/view/danieletaufer) / [F. Mohammadi](https://www.fatemehmohammadi.com/)
+- Research Internship (2022) at TU Munich; supervisor: [V. Weger](https://www.ce.cit.tum.de/en/lnt/people/senior-researchers/weger/)
+- Advanced Master's in Science and Technology at IUSS Pavia (2020-present); expected graduation: may 2023
+- Master's in Mathematics (2020-2022) at University of Pavia: 110/110 cum laude; thesis: *On the automorphism groups of certain radical rings with application to cryptography*, supervisor: A. Canonaco, co-supervisor: M. Calderini
+- Bachelor's in Mathematics (2017-2020) at University of Pavia: 110/110 cum laude; thesis: *Asymptotic Results for Goldbach's Conjecture*, supervisor: A. Canonaco
 
-## Contacts
+## Awards
 
-Email: riccardo[dot]invernizzi[at]student[dot]kuleuven[dot]be  
-GitHub: [r98inver](https://github.com/r98inver)  
-GitLab: [r98inver](https://gitlab.com/r98inver)  
+- Winner of KU Leuven's [BEST Coding Challenge](https://bestleuven.eu/coding-challenge-2022/?fbclid=IwAR1ZCfKacXd_vEX96usqMNyTEFEBRdgLrbMXiGPXlKe1g2cQdPAQaK4Lmik) 2022 together with [G. Masiero](https://sites.google.com/view/giacomomasiero/home-page)
+- [Bernasconi Award](https://www.ghislieri.it/en/2022/05/25/collegio-en/premi-bruni-bernasconi/)(2022) for best research project
+- [IUSS](https://www.iusspavia.it/it) Scolarship (2020-2022) for selected students
+- [Felice Casorati](https://matematica.unipv.it/borse-per-laureati/concorso-per-6-borse-di-studio-laurea-magistrale-in-matematica-universita-pavia-a-a-2020-21/) Scholarship (2020-2022) for outstanding math students
