@@ -21,7 +21,7 @@ timezone: Europe/Rome
 
 title: r98inver                  # the main title
 
-tagline: Math Studend - KU Leuven   # it will display as the sub-title
+tagline: Math Student - KU Leuven   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Personal website of Riccardo Invernizzi, math stutent ad KU Leuven.
