@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 1
 toc: true
 ---
 
@@ -30,8 +30,8 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 
 ## Talks
 
-- [04/23 - Workshop] *TBD* at [Tensors: geometry and applications](https://sites.google.com/view/reading-seminar-tensors-2023/home), KU Leuven
-- [02/23 - Workshop] ***Multiplication polynomials over finite local rings*** at [Solving Polynomial Systems](https://sites.google.com/view/solvingpolynomialsystems/home), KU Leuven
+- [mar 23 - Workshop] ***Elementary results on rank and border rank***, at [Tensors: geometry and applications](https://sites.google.com/view/reading-seminar-tensors-2023/home), KU Leuven
+- [feb 23 - Workshop] ***Multiplication polynomials over finite local rings***, at [Solving Polynomial Systems](https://sites.google.com/view/solvingpolynomialsystems/home), KU Leuven
 
 
 ## Academic Career
