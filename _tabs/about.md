@@ -5,7 +5,7 @@ order: 1
 toc: true
 ---
 
-Hi! My name is Riccardo Invernizzi and I'm currently a *perfectioning student* at KU Leuven. I'm supervised by [D. Taufer](https://sites.google.com/view/danieletaufer) in the research group of Prof. [F. Mohammadi](https://www.fatemehmohammadi.com/).   
+Hi! My name is Riccardo Invernizzi and I'm currently a *perfectioning student* at KU Leuven. I'm supervised by [D. Taufer](https://sites.google.com/view/danieletaufer) and Prof. [F. Mohammadi](https://www.fatemehmohammadi.com/).   
 I am interested in number theory, combinatorics and polynomial systems both from theoretical and algorithmic pureviews.  
 
 Detailed information about my academic career and working experiences can be found in my [CV](/assets/data/cv.pdf). The most important points are summarized below.  
@@ -44,7 +44,6 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 
 ## Awards
 
-- Winner of KU Leuven's [BEST Coding Challenge](https://bestleuven.eu/coding-challenge-2022/?fbclid=IwAR1ZCfKacXd_vEX96usqMNyTEFEBRdgLrbMXiGPXlKe1g2cQdPAQaK4Lmik) 2022 together with [G. Masiero](https://sites.google.com/view/giacomomasiero/home-page)
 - [Bernasconi Award](https://www.ghislieri.it/en/2022/05/25/collegio-en/premi-bruni-bernasconi/)(2022) for best research project
 - [IUSS](https://www.iusspavia.it/it) Scolarship (2020-2022) for selected students
 - [Felice Casorati](https://matematica.unipv.it/borse-per-laureati/concorso-per-6-borse-di-studio-laurea-magistrale-in-matematica-universita-pavia-a-a-2020-21/) Scholarship (2020-2022) for outstanding math students
