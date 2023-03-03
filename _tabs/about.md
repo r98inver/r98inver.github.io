@@ -5,7 +5,7 @@ order: 1
 toc: true
 ---
 
-Hi! My name is Riccardo Invernizzi and I'm currently a *perfectioning student* at KU Leuven. I'm supervised by [D. Taufer](https://sites.google.com/view/danieletaufer) and Prof. [F. Mohammadi](https://www.fatemehmohammadi.com/).   
+Hi! My name is Riccardo Invernizzi and I'm currently a *perfectioning student* at KU Leuven. I'm supervised by [D. Taufer](https://sites.google.com/view/danieletaufer) and Prof. [F. Mohammadi](https://www.fatemehmohammadi.com/). I will start a PhD in April at KU Leuven under the supervision of Prof. [F. Mohammadi](https://www.fatemehmohammadi.com/).   
 I am interested in number theory, combinatorics and polynomial systems both from theoretical and algorithmic pureviews.  
 
 Detailed information about my academic career and working experiences can be found in my [CV](/assets/data/cv.pdf). The most important points are summarized below.  
