@@ -47,3 +47,4 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 - [Bernasconi Award](https://www.ghislieri.it/en/2022/05/25/collegio-en/premi-bruni-bernasconi/)(2022) for best research project
 - [IUSS](https://www.iusspavia.it/it) Scolarship (2020-2022) for selected students
 - [Felice Casorati](https://matematica.unipv.it/borse-per-laureati/concorso-per-6-borse-di-studio-laurea-magistrale-in-matematica-universita-pavia-a-a-2020-21/) Scholarship (2020-2022) for outstanding math students
+- Research grant as data scientist in the context of 2017 PRIN *"Governance through big data: challenges for European Law"*
