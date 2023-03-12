@@ -23,15 +23,16 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 
 ## Publications
 
-- [Preprint] [Multiplication polynomials for elliptic curves over finite local rings](https://arxiv.org/abs/2302.03650), with D. Taufer
-- ['I See Something You Don't See'. A Computational Analysis of the Digital Services Act and the Digital Markets Act](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3780938), *vol 6, Stanford Computational Antitrust, 2021*, with F. Di Porto, T. Grote and G. Volpi
-- [Artificial Intelligence and Competition Law. A Computational Analysis of the DMA and DSA](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3929335), *Concurrences, 3 (2021)*, with F. Di Porto, T. Grote and G. Volpi
+- [Preprint] **Multiplication polynomials for elliptic curves over finite local rings**, with D. Taufer ([arxiv](https://arxiv.org/abs/2302.03650))
+- **'I See Something You Don't See'. A Computational Analysis of the Digital Services Act and the Digital Markets Act**, *vol 6, Stanford Computational Antitrust, 2021*, with F. Di Porto, T. Grote and G. Volpi ([SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3780938))
+- **Artificial Intelligence and Competition Law. A Computational Analysis of the DMA and DSA**, *Concurrences, 3 (2021)*, with F. Di Porto, T. Grote and G. Volpi ([SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3929335))
 
 
 ## Talks
 
-- [mar 23 - Workshop] ***Elementary results on rank and border rank***, at [Tensors: geometry and applications](https://sites.google.com/view/reading-seminar-tensors-2023/home), KU Leuven
-- [feb 23 - Workshop] ***Multiplication polynomials over finite local rings***, at [Solving Polynomial Systems](https://sites.google.com/view/solvingpolynomialsystems/home), KU Leuven
+- [mar 23 - Workshop] ***Elementary results on rank and border rank***, at *Tensors: geometry and applications*, KU Leuven ([website](https://sites.google.com/view/reading-seminar-tensors-2023/home))
+- [feb 23 - Workshop] ***Multiplication polynomials over finite local rings***, at *Solving Polynomial Systems*, KU Leuven ([website](https://sites.google.com/view/solvingpolynomialsystems/home))
+- [set 21 - Podcas] ***A Computational Analysis of the DSA and DMA***, on *Stanford Computational Antitrust Podcast* ([youtube](https://www.youtube.com/watch?v=nh2xDYadG78))
 
 
 ## Academic Career
