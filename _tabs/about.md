@@ -32,7 +32,7 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 
 - [apr 23 - workshop] ***Linear Convex Optimization with Gurobi*** at *Solving Polynomial Systems*, KU Leuven ([website](https://sites.google.com/view/solvingpolynomialsystems/home){:target="_blank"} - [notebook](/assets/mate/talks/2304_linear_convex_opt.ipynb))
 - [mar 23 - Workshop] ***Representation theory (Part 3)***, at *Tensors: geometry and applications*, KU Leuven ([website](https://sites.google.com/view/reading-seminar-tensors-2023/home){:target="_blank"})
-- [feb 23 - Workshop] ***Multiplication polynomials over finite local rings***, at *Solving Polynomial Systems*, KU Leuven ([website](https://sites.google.com/view/solvingpolynomialsystems/home){:target="_blank"})
+- [feb 23 - Workshop] ***Multiplication polynomials over finite local rings***, at *Solving Polynomial Systems*, KU Leuven ([website](https://sites.google.com/view/solvingpolynomialsystems/home){:target="_blank"} - [slides](/assets/mate/talks/2302_mul_poly.pdf))
 - [set 21 - Podcas] ***A Computational Analysis of the DSA and DMA***, on *Stanford Computational Antitrust Podcast* ([youtube](https://www.youtube.com/watch?v=nh2xDYadG78){:target="_blank"})
 
 ## Attended workshops / conferences
@@ -45,7 +45,7 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 - PhD (2022 - present) at KU Leuven; supervisor: [F. Mohammadi](https://www.fatemehmohammadi.com/){:target="_blank"}
 - Research Internship (2022-2023) at KU Leuven; supervisor: [D. Taufer](https://sites.google.com/view/danieletaufer){:target="_blank"} / [F. Mohammadi](https://www.fatemehmohammadi.com/){:target="_blank"}
 - Research Internship (2022) at TU Munich; supervisor: [V. Weger](https://www.ce.cit.tum.de/en/lnt/people/senior-researchers/weger/){:target="_blank"}
-- Advanced Master's in Science and Technology at IUSS Pavia (2020-present); expected graduation: may 2023
+- Advanced Master's in Science and Technology at IUSS Pavia (2020-2022): 100/100 cum laude; thesis: *Multiplication polynomials for elliptic curves over finite local rings*, supervisor: D. Taufer
 - Master's in Mathematics (2020-2022) at University of Pavia: 110/110 cum laude; thesis: *On the automorphism groups of certain radical rings with application to cryptography*, supervisor: A. Canonaco, co-supervisor: M. Calderini
 - Bachelor's in Mathematics (2017-2020) at University of Pavia: 110/110 cum laude; thesis: *Asymptotic Results for Goldbach's Conjecture*, supervisor: A. Canonaco
 
