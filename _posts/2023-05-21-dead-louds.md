@@ -6,9 +6,9 @@ tags: [crt, coppersmith method] # TAG names should always be lowercase
 math: true
 ---
 
-We are given some CRT reminders modulo primes of a secret number, together with some fake values. To recover the number, for small instances a simple brute-force solution is enough; for larger instances we can do that using the *Coppersmith Method*. 
+We are given some CRT reminders modulo primes of a secret number, together with some fake values. To recover the number, for small instances a simple brute-force solution is enough; for the easy larger instance we can do that using the *Coppersmith Method*, which however fails for the harder one. 
 
-> **Event Link:** [DeadSec CTF](https://ctftime.org/event/1962)/   
+> **Event Link:** [DeadSec CTF](https://ctftime.org/event/1962)   
 {: .prompt-info }
 
 ## Step 1 - Brute-force
