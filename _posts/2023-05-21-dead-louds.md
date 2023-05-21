@@ -103,7 +103,7 @@ for i in range(len(S)):
 	x1,x2,x3,x4 = S[i]
 	fi = (x - x1)*(x - x2)*(x - x3)*(x - x4) 
 	n0, n1, n2, n3, n4 = fi.int_list()
-	c0.append(n0); c1.append(n1);c2.append(n2);	c3.append(n3); c4.append(n4);
+	c0.append(n0); c1.append(n1); c2.append(n2); c3.append(n3); c4.append(n4);
 
 print('CRT')
 # Coefficients of the final f
@@ -123,7 +123,7 @@ s_roots = f.small_roots(X = B, beta=0.5)
 print(f'{s_roots}')
 ```
 
-## Step 2 - Really Loud Revenge
+## Step 3 - Really Loud Revenge
 
 Like before, the difference between `Loud Revenge` and `Really Loud Revenge` is only in the parameters. This is the source code for `Really Loud Revenge`:
 
@@ -139,4 +139,6 @@ for Si in S:
     random.shuffle(Si)
 ```
 
-This time, we only have $20$ reminders of `256` bits each. If we apply the above idea, we get $N \sim 2^{5120}$, and $X = 2^{4096}$. Since $d = 4$, we can no longer apply Coppersmith Method, at least not in this way (actually, for it to work we would need $d=1$). As of now, I don't know the solution to this part. It may require to build the lattice directly to apply LLL (without Coppersmith Method), or some different idea.
+This time, we only have $20$ reminders of `256` bits each. If we apply the above idea, we get $N \sim 2^{5120}$, and $X = 2^{4096}$. Since $d = 4$, we can no longer apply Coppersmith Method, at least not in this way (actually, for it to work we would need $d=1$). 
+
+The solution to this part was suggested me after the challenge by [UnknownError235](https://ctftime.org/user/69826) and [vishiswoz](https://ctftime.org/team/39020/). It consists in solving the *Noisy Chinese Remaindering* problem as described in [this](https://link.springer.com/content/pdf/10.1007/3-540-45539-6_4.pdf) paper. Using a direct lattice reduction, instead of passing through Coppersmith Method, can guarantee to find solutions with better bounds. Of course the same lattice also works for `Loud Revenge`. 
