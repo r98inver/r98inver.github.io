@@ -79,7 +79,7 @@ be a degree $d$ polynomial. Given a module $N$ and a bound $X$ such that $X \leq
 
 All we need is to define the right polynomial. Here the observation we made before to build the brute-force solution comes in our help. Let $P = \prod p_i \sim 2^{32768}$ be the product of all the $256$ $p_i$'s. If we define a polynomial that has as zeros all the possible combinations obtained via CRT with all possible reminders we are given, this polynomial will have many very big solution $\mod P$ (of the order of magnitude of $P$ itself), but also a small solution, namely $flag \leq 2^{4096}$. This polynomial is easy to build: for each set $S_i$, we compute
 
-$$ f_i = (x-s_1)(x-s_2)(x-s_3)(x-s_4) \mod p_i,$
+$$ f_i = (x-s_1)(x-s_2)(x-s_3)(x-s_4) \mod p_i, $$
 
 where $s_1,s_2,s_3,s_4$ are the four elements of $S_i$. We can then obtain the desired polynomial $f$ by taking the CRT of all $f_i$ modulo the $p_i$. In this way, we have $N=P \sim 2^{32768}$, $X=2^{4096}$ and $d=4$. Since $0.5N^{1/4} \sim 2^{8192}$ we can apply the Coppersmith Method. Luckily, this is already implemented in `sage` with the function `small_roots`, so we don't need to worry about that. The final code is:
 
@@ -141,4 +141,4 @@ for Si in S:
 
 This time, we only have $20$ reminders of `256` bits each. If we apply the above idea, we get $N \sim 2^{5120}$, and $X = 2^{4096}$. Since $d = 4$, we can no longer apply Coppersmith Method, at least not in this way (actually, for it to work we would need $d=1$). 
 
-The solution to this part was suggested me after the challenge by [UnknownError235](https://ctftime.org/user/69826) and [vishiswoz](https://ctftime.org/team/39020/). It consists in solving the *Noisy Chinese Remaindering* problem as described in [this](https://link.springer.com/content/pdf/10.1007/3-540-45539-6_4.pdf) paper. Using a direct lattice reduction, instead of passing through Coppersmith Method, can guarantee to find solutions with better bounds. Of course the same lattice also works for `Loud Revenge`. 
+I failed to solve this part during the CTF. I thank [UnknownError235](https://ctftime.org/user/69826) and [vishiswoz](https://ctftime.org/team/39020/) (the author of the challenge) for suggesting me the correct solution afterwards. It consists in solving the *Noisy Chinese Remaindering* problem as described in [this](https://link.springer.com/content/pdf/10.1007/3-540-45539-6_4.pdf) paper. Using a direct lattice reduction, instead of passing through Coppersmith Method, can result in solutions with better bounds. Of course the same lattice also works for `Loud Revenge`. 
