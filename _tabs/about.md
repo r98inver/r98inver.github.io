@@ -8,18 +8,17 @@ toc: true
 Hi! My name is Riccardo Invernizzi and I'm currently a *PhD Student* at KU Leuven. I'm supervised by Prof. [F. Mohammadi](https://www.fatemehmohammadi.com/){:target="_blank"}.      
 I am interested in number theory, combinatorics and polynomial systems both from theoretical and algorithmic pureviews.  
 
-Detailed information about my academic career and working experiences can be found in my [CV](/assets/data/cv.pdf){:target="_blank"}. The most important points are summarized below.  
+The most important points of my academic career are summarized below. 
 
 I also enjoy playing coding competition of various kind, mainly CTF's and competitive programming. Some challenge writeups can be found in this website. This is not meant to be a professional blog, but rather an archive of problems that I found interesting or code that may be useful in the future. However, feel free to read them and give feedbacks and suggestions.
 
-## Reach me
+## Contacts
 
 - Email: `name.surname@kuleuven.be`
 - ORCiD: [0000-0002-2271-6822](https://orcid.org/0000-0002-2271-6822){:target="_blank"}
 - [Google Scholar](https://scholar.google.com/citations?user=tJQkJIUAAAAJ&hl=en){:target="_blank"}
 - [arxiv](https://arxiv.org/a/invernizzi_r_1.html){:target="_blank"}
 - GitHub: [r98inver](https://github.com/r98inver){:target="_blank"}
-- GitLab: [r98inver](https://gitlab.com/r98inver){:target="_blank"} (mostly used for private repositories)
 
 ## Publications
 
@@ -30,10 +29,11 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 
 ## Talks
 
-- [apr 23 - workshop] ***Linear Convex Optimization with Gurobi*** at *Solving Polynomial Systems*, KU Leuven ([website](https://sites.google.com/view/solvingpolynomialsystems/home){:target="_blank"} - [notebook](/assets/mate/talks/2304_linear_convex_opt.ipynb))
+- [apr 23 - Workshop] ***Linear Convex Optimization with Gurobi*** at *Solving Polynomial Systems*, KU Leuven ([website](https://sites.google.com/view/solvingpolynomialsystems/home){:target="_blank"} - [notebook](/assets/mate/talks/2304_linear_convex_opt.ipynb))
+- [apr 23 - Poster Session] ***Multiplication polynomials for elliptic curves over finite local rings*** at *Graduate Student Meeting on Applied Algebra and Combinatorics* ([website](https://sites.google.com/view/applied-alg-comb-2023){:target="_blank"} - [poster](/assets/mate/talks/2304_mul_poly_poster.pdf))
 - [mar 23 - Workshop] ***Representation theory (Part 3)***, at *Tensors: geometry and applications*, KU Leuven ([website](https://sites.google.com/view/reading-seminar-tensors-2023/home){:target="_blank"})
 - [feb 23 - Workshop] ***Multiplication polynomials over finite local rings***, at *Solving Polynomial Systems*, KU Leuven ([website](https://sites.google.com/view/solvingpolynomialsystems/home){:target="_blank"} - [slides](/assets/mate/talks/2302_mul_poly.pdf))
-- [set 21 - Podcas] ***A Computational Analysis of the DSA and DMA***, on *Stanford Computational Antitrust Podcast* ([youtube](https://www.youtube.com/watch?v=nh2xDYadG78){:target="_blank"})
+- [set 21 - Podcast] ***A Computational Analysis of the DSA and DMA***, on *Stanford Computational Antitrust Podcast* ([youtube](https://www.youtube.com/watch?v=nh2xDYadG78){:target="_blank"})
 
 ## Attended workshops / conferences
 
