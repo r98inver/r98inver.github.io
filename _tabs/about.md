@@ -22,7 +22,7 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 
 ## Publications
 
-- **Multiplication polynomials for elliptic curves over finite local rings**, *to appear at ISSAC 2023*, with D. Taufer ([arxiv](https://arxiv.org/abs/2302.03650){:target="_blank"})
+- **Multiplication polynomials for elliptic curves over finite local rings**, *ISSAC 2023 Proceedings*, with D. Taufer ([arxiv](https://arxiv.org/abs/2302.03650){:target="_blank"} - [DOI](https://dl.acm.org/doi/10.1145/3597066.3597068){:target="_blank"})
 - **'I See Something You Don't See'. A Computational Analysis of the Digital Services Act and the Digital Markets Act**, *vol 6, Stanford Computational Antitrust, 2021*, with F. Di Porto, T. Grote and G. Volpi ([SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3780938){:target="_blank"})
 - **Artificial Intelligence and Competition Law. A Computational Analysis of the DMA and DSA**, *Concurrences, 3 (2021)*, with F. Di Porto, T. Grote and G. Volpi ([SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3929335){:target="_blank"})
 
@@ -30,15 +30,21 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 ## Talks
 
 - [apr 23 - Workshop] ***Linear Convex Optimization with Gurobi*** at *Solving Polynomial Systems*, KU Leuven ([website](https://sites.google.com/view/solvingpolynomialsystems/home){:target="_blank"} - [notebook](/assets/mate/talks/2304_linear_convex_opt.ipynb))
-- [apr 23 - Poster Session] ***Multiplication polynomials for elliptic curves over finite local rings*** at *Graduate Student Meeting on Applied Algebra and Combinatorics* ([website](https://sites.google.com/view/applied-alg-comb-2023){:target="_blank"} - [poster](/assets/mate/talks/2304_mul_poly_poster.pdf))
+)
 - [mar 23 - Workshop] ***Representation theory (Part 3)***, at *Tensors: geometry and applications*, KU Leuven ([website](https://sites.google.com/view/reading-seminar-tensors-2023/home){:target="_blank"})
 - [feb 23 - Workshop] ***Multiplication polynomials over finite local rings***, at *Solving Polynomial Systems*, KU Leuven ([website](https://sites.google.com/view/solvingpolynomialsystems/home){:target="_blank"} - [slides](/assets/mate/talks/2302_mul_poly.pdf))
 - [set 21 - Podcast] ***A Computational Analysis of the DSA and DMA***, on *Stanford Computational Antitrust Podcast* ([youtube](https://www.youtube.com/watch?v=nh2xDYadG78){:target="_blank"})
 
+## Posters
+
+- [jun 23] ***Multiplication polynomials for elliptic curves over finite local rings*** at *Foundation of Computational Mathematics 2023*, Paris ([website](https://focm2023.org/){:target="_blank"} - [poster](/assets/mate/talks/2304_mul_poly_poster.pdf))
+- [apr 23] ***Multiplication polynomials for elliptic curves over finite local rings*** at *Graduate Student Meeting on Applied Algebra and Combinatorics*, KTH Stokholm ([website](https://sites.google.com/view/applied-alg-comb-2023){:target="_blank"} - [poster](/assets/mate/talks/2304_mul_poly_poster.pdf))
+
 ## Attended workshops / conferences
 
-- [apr 23] - ***Solving Hard Polynomial Systems*** at *MPI Mis - Leipzig* ([website](https://www.mis.mpg.de/calendar/conferences/2023/shps23.html){:target="_blank"})
-- [apr 23] - ***Graduate Student Meeting on Applied Algebra and Combinatorics*** at *KTH Stokholm* ([website](https://sites.google.com/view/applied-alg-comb-2023){:target="_blank"})
+- [jun 23] - ***Foundation of Computational Mathematics (FoCM) 2023*** at Sorbonne Universitè - Paris ([website](https://focm2023.org/){:target="_blank"})
+- [apr 23] - ***Solving Hard Polynomial Systems*** at *MPI MIS - Leipzig* ([website](https://www.mis.mpg.de/calendar/conferences/2023/shps23.html){:target="_blank"})
+- [apr 23] - ***Graduate Student Meeting on Applied Algebra and Combinatorics*** at *KTH - Stokholm* ([website](https://sites.google.com/view/applied-alg-comb-2023){:target="_blank"})
 
 ## Academic Career
 
