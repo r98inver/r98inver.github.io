@@ -1,6 +1,6 @@
 ---
 title: HTB Business CTF - Vitrium Stash
-date: 2023-05-21 13:00:00
+date: 2023-07-17 13:00:00
 categories: [Ctf Writeups, Crypto]
 tags: [DSA, lattice, lattice inequalities] # TAG names should always be lowercase
 math: true
@@ -40,7 +40,7 @@ $$
 $$
 
 We can ask the server to sign messages of the form `{"username": username, "admin": False}`, where `username` is an arbitrary string we can provide. We win if we manage to find a value for `username` such that the resulting string is congruent `mod q` to another string containing `"admin":true`.    
-Recall that a string here is just a large number: each letter is in fact a `8-bit` integer, so we can see `ab = 97*2^8 + 98` (`a` is `97` in ASCII and `b` is `98`). We can easily generalize this idea including variables instead of characters: the string $a_2a_1a_0$ correspond with the number $a_0 + 2^8 a_1 + 2^{16}a_2$, and so on. In our problem, some of this variables will be fixed by the structure of the message. The holes instead will have a strictly bounded value: we want them to be printable, so they can be integers between `32` and `126` (theoretically we should be more careful here, since not every printable character can go inside a `json` string, but fine). We can also impose more strict requirements, for example if we want only printable digits we may ask numbers between `48` and `57`. To sum up, we have a bunch of integer inequalities, which can be solved quite effectively as a CVP instance using Babai's algorithm (see [here](https://github.com/rkm0959/Inequality_Solving_with_CVP) for the implementation)).     
+Recall that a string here is just a large number: each letter is in fact a `8-bit` integer, so we can see `ab = 97*2^8 + 98` (`a` is `97` in ASCII and `b` is `98`). We can easily generalize this idea including variables instead of characters: the string $a_2a_1a_0$ correspond with the number $a_0 + 2^8 a_1 + 2^{16}a_2$, and so on. In our problem, some of this variables will be fixed by the structure of the message. The holes instead will have a strictly bounded value: we want them to be printable, so they can be integers between `32` and `126` (theoretically we should be more careful here, since not every printable character can go inside a `json` string, but fine). We can also impose more strict requirements, for example if we want only printable digits we may ask numbers between `48` and `57`. To sum up, we have a bunch of integer inequalities, which can be solved quite effectively as a CVP instance using Babai's algorithm (see [here](https://github.com/rkm0959/Inequality_Solving_with_CVP) for the implementation).     
 First of all, we need a template for our strings. The target string is fixed, we can put holes only on the username. For the forged string we decided to keep it as simple as possible, setting only the `admin` parameter.
 ```python
 s1 = b'{"admin": 1################################}'
