@@ -2,7 +2,7 @@
 title: HTB Business CTF - Vitrium Stash
 date: 2023-07-17 13:00:00
 categories: [Ctf Writeups, Crypto]
-tags: [DSA, lattice, lattice inequalities] # TAG names should always be lowercase
+tags: [dsa, lattice, lattice inequalities] # TAG names should always be lowercase
 math: true
 ---
 
@@ -10,7 +10,7 @@ We have to forge a DSA signature for the `admin` being able to ask the server a 
 
 I solved this challenge together with [@robin](https://ur4ndom.dev/){:target="_blank"}.
 
-> **Event Link:** [HTB Business CTF 2023](https://ctftime.org/event/1989/)   
+> **Event Link:** [HTB Business CTF 2023](https://ctftime.org/event/1989/){:target="_blank"}   
 {: .prompt-info }
 
 > The full **solution scripts** is composed by:

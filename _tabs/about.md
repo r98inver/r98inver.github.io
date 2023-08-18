@@ -5,7 +5,7 @@ order: 1
 toc: true
 ---
 
-Hi! My name is Riccardo Invernizzi and I'm currently a *PhD Student* at KU Leuven. I'm supervised by Prof. [F. Mohammadi](https://www.fatemehmohammadi.com/){:target="_blank"}.      
+Hi! My name is Riccardo Invernizzi and I'm currently a *PhD Student* at KU Leuven. I'm supervised by Prof. [F. Mohammadi](https://www.fatemehmohammadi.com/){:target="_blank"} and co-supervised by [D. Taufer](https://sites.google.com/view/danieletaufer){:target="_blank"}.      
 I am interested in number theory, combinatorics and polynomial systems both from theoretical and algorithmic pureviews.  
 
 The most important points of my academic career are summarized below. 
@@ -49,7 +49,7 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 
 ## Academic Career
 
-- PhD (2022 - present) at KU Leuven; supervisor: [F. Mohammadi](https://www.fatemehmohammadi.com/){:target="_blank"}
+- PhD (2022 - present) at KU Leuven; supervisor: [F. Mohammadi](https://www.fatemehmohammadi.com/){:target="_blank"}, co-supervisor: [D. Taufer](https://sites.google.com/view/danieletaufer){:target="_blank"}
 - Research Internship (2022-2023) at KU Leuven; supervisor: [D. Taufer](https://sites.google.com/view/danieletaufer){:target="_blank"} / [F. Mohammadi](https://www.fatemehmohammadi.com/){:target="_blank"}
 - Research Internship (2022) at TU Munich; supervisor: [V. Weger](https://www.ce.cit.tum.de/en/lnt/people/senior-researchers/weger/){:target="_blank"}
 - Advanced Master's in Science and Technology at IUSS Pavia (2020-2022): 100/100 cum laude; thesis: *Multiplication polynomials for elliptic curves over finite local rings*, supervisor: D. Taufer
