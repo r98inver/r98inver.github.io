@@ -54,5 +54,5 @@ In this way we get the final flag: `SEKAI{Full_QR_Attack_is_not_easy_https://epr
 
 ## References
 
-<a id="1">[1]</a> Ghosh, E., Kamara, S. and Tamassia, R., [2021](https://dl.acm.org/doi/10.1145/3433210.3453099). Efficient graph encryption scheme for shortest path queries. In Proceedings of the 2021 ACM Asia Conference on Computer and Communications Security (pp. 516-525).
+<a id="1">[1]</a> Ghosh, E., Kamara, S. and Tamassia, R., [2021](https://dl.acm.org/doi/10.1145/3433210.3453099). Efficient graph encryption scheme for shortest path queries. In Proceedings of the 2021 ACM Asia Conference on Computer and Communications Security (pp. 516-525).    
 <a id="2">[2]</a> Falzon, F. and Paterson, K.G., [2022](https://eprint.iacr.org/2022/838.pdf). An efficient query recovery attack against a graph encryption scheme. In European Symposium on Research in Computer Security (pp. 325-345). Cham: Springer International Publishing.
