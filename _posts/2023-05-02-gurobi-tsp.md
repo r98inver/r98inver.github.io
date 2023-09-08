@@ -1,6 +1,6 @@
 ---
 title: Gurobi Showcase 2 - TSP and Lazy Constraints
-date: 2023-05-06 20:00:00 +0100
+date: 2023-05-06 20:00:00
 categories: [Mathcoding]
 tags: [gurobi, tsp, lazy constraints] # TAG names should always be lowercase
 math: true
