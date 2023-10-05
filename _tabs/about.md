@@ -30,7 +30,7 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 ## Talks
 
 - [jul 23 - Conference] ***Multiplication polynomials for elliptic curves over finite local rings*** at *ISSAC 2023*, Tromso ([slides](/assets/mate/talks/2307_ec.pdf) - [website](https://www.issac-conference.org/2023/){:target="_blank"})
-- [apr 23 - Workshop] ***Linear Convex Optimization with Gurobi*** at *Solving Polynomial Systems*, KU Leuven ([notebook](/assets/mate/talks/2304_linear_convex_opt.ipynb) - [website](https://sites.google.com/view/solvingpolynomialsystems/home){:target="_blank"})
+- [apr 23 - Workshop] ***Linear Convex Optimization with Gurobi*** at *Solving Polynomial Systems*, KU Leuven ([notebook](/assets/mate/talks/2304_linear_convex_opt.ipynb) - [color_transfer.py](/assets/mate/talks/2304_color_transfer.py) - [website](https://sites.google.com/view/solvingpolynomialsystems/home){:target="_blank"})
 - [mar 23 - Workshop] ***Representation theory (Part 3)***, at *Tensors: geometry and applications*, KU Leuven ([website](https://sites.google.com/view/reading-seminar-tensors-2023/home){:target="_blank"})
 - [feb 23 - Workshop] ***Multiplication polynomials over finite local rings***, at *Solving Polynomial Systems*, KU Leuven ([slides](/assets/mate/talks/2302_mul_poly.pdf) - [website](https://sites.google.com/view/solvingpolynomialsystems/home){:target="_blank"})
 - [set 21 - Podcast] ***A Computational Analysis of the DSA and DMA***, on *Stanford Computational Antitrust Podcast* ([youtube](https://www.youtube.com/watch?v=nh2xDYadG78){:target="_blank"})
