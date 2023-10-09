@@ -77,8 +77,8 @@ def find_factor(ed, n):
 			print(f'{g = }')
 			return g
 
+		b = pow(a, h, n)
 		while True:
-			b = pow(a, h, n)
 			g = gcd(b-1, n)
 			if g == 1:
 				b = pow(b, 2, n)
