@@ -5,7 +5,10 @@ order: 1
 toc: true
 ---
 
-Hi! My name is Riccardo Invernizzi and I'm currently a *PhD Student* at KU Leuven. I'm supervised by Prof. [F. Mohammadi](https://www.fatemehmohammadi.com/){:target="_blank"} and co-supervised by [D. Taufer](https://sites.google.com/view/danieletaufer){:target="_blank"}.      
+Hi! My name is Riccardo Invernizzi and I'm currently a *PhD Student* at KU Leuven. 
+{% comment %}
+I'm supervised by Prof. [F. Mohammadi](https://www.fatemehmohammadi.com/){:target="_blank"} and co-supervised by [D. Taufer](https://sites.google.com/view/danieletaufer){:target="_blank"}.      
+{% endcomment %}
 I am interested in number theory, combinatorics and polynomial systems both from theoretical and algorithmic pureviews.  
 
 The most important points of my academic career are summarized below. 
@@ -22,6 +25,7 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 
 ## Publications
 
+- **Differential experiments using parallel alternative operations**, to appear on *Journal of Mathematical Cryptology*, with M. Calderini and R. Civino
 - **Multiplication polynomials for elliptic curves over finite local rings**, *ISSAC 2023 Proceedings*, with D. Taufer ([arxiv](https://arxiv.org/abs/2302.03650){:target="_blank"} - [ACM](https://dl.acm.org/doi/10.1145/3597066.3597068){:target="_blank"} - [code](https://github.com/r98inver/ec-local-rings))
 - **'I See Something You Don't See'. A Computational Analysis of the Digital Services Act and the Digital Markets Act**, *vol 6, Stanford Computational Antitrust, 2021*, with F. Di Porto, T. Grote and G. Volpi ([SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3780938){:target="_blank"})
 - **Artificial Intelligence and Competition Law. A Computational Analysis of the DMA and DSA**, *Concurrences, 3 (2021)*, with F. Di Porto, T. Grote and G. Volpi ([SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3929335){:target="_blank"})
@@ -31,13 +35,18 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 
 - [jul 23 - Conference] ***Multiplication polynomials for elliptic curves over finite local rings*** at *ISSAC 2023*, Tromso ([slides](/assets/mate/talks/2307_ec.pdf) - [website](https://www.issac-conference.org/2023/){:target="_blank"})
 - [apr 23 - Workshop] ***Linear Convex Optimization with Gurobi*** at *Solving Polynomial Systems*, KU Leuven ([notebook](/assets/mate/talks/2304_linear_convex_opt.ipynb) - [color_transfer.py](/assets/mate/talks/2304_color_transfer.py) - [website](https://sites.google.com/view/solvingpolynomialsystems/home){:target="_blank"})
+- [set 21 - Podcast] ***A Computational Analysis of the DSA and DMA***, on *Stanford Computational Antitrust Podcast* ([youtube](https://www.youtube.com/watch?v=nh2xDYadG78){:target="_blank"})
+
+{% comment %}
 - [mar 23 - Workshop] ***Representation theory (Part 3)***, at *Tensors: geometry and applications*, KU Leuven ([website](https://sites.google.com/view/reading-seminar-tensors-2023/home){:target="_blank"})
 - [feb 23 - Workshop] ***Multiplication polynomials over finite local rings***, at *Solving Polynomial Systems*, KU Leuven ([slides](/assets/mate/talks/2302_mul_poly.pdf) - [website](https://sites.google.com/view/solvingpolynomialsystems/home){:target="_blank"})
-- [set 21 - Podcast] ***A Computational Analysis of the DSA and DMA***, on *Stanford Computational Antitrust Podcast* ([youtube](https://www.youtube.com/watch?v=nh2xDYadG78){:target="_blank"})
+{% endcomment %}
 
 ## Posters
 
 - [jun 23] ***Multiplication polynomials for elliptic curves over finite local rings*** at *Foundation of Computational Mathematics 2023*, Paris ([website](https://focm2023.org/){:target="_blank"} - [poster](/assets/mate/talks/2304_mul_poly_poster.pdf))
+
+{% comment %}
 - [apr 23] ***Multiplication polynomials for elliptic curves over finite local rings*** at *Graduate Student Meeting on Applied Algebra and Combinatorics*, KTH Stokholm ([website](https://sites.google.com/view/applied-alg-comb-2023){:target="_blank"} - [poster](/assets/mate/talks/2304_mul_poly_poster.pdf))
 
 ## Attended workshops / conferences
@@ -46,15 +55,16 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 - [jun 23] - ***Foundation of Computational Mathematics (FoCM) 2023*** at *Sorbonne Universitè - Paris* ([website](https://focm2023.org/){:target="_blank"})
 - [apr 23] - ***Solving Hard Polynomial Systems*** at *MPI MIS - Leipzig* ([website](https://www.mis.mpg.de/calendar/conferences/2023/shps23.html){:target="_blank"})
 - [apr 23] - ***Graduate Student Meeting on Applied Algebra and Combinatorics*** at *KTH - Stokholm* ([website](https://sites.google.com/view/applied-alg-comb-2023){:target="_blank"})
+{% endcomment %}
 
 ## Academic Career
 
 - PhD (2023 - present) at KU Leuven; supervisor: [F. Mohammadi](https://www.fatemehmohammadi.com/){:target="_blank"}, co-supervisor: [D. Taufer](https://sites.google.com/view/danieletaufer){:target="_blank"}
 - Research Internship (2022-2023) at KU Leuven; supervisor: [D. Taufer](https://sites.google.com/view/danieletaufer){:target="_blank"} / [F. Mohammadi](https://www.fatemehmohammadi.com/){:target="_blank"}
 - Research Internship (2022) at TU Munich; supervisor: [V. Weger](https://www.ce.cit.tum.de/en/lnt/people/senior-researchers/weger/){:target="_blank"}
-- Advanced Master's in Science and Technology at IUSS Pavia (2020-2022): 100/100 cum laude; thesis: *Multiplication polynomials for elliptic curves over finite local rings*, supervisor: D. Taufer
-- Master's in Mathematics (2020-2022) at University of Pavia: 110/110 cum laude; thesis: *On the automorphism groups of certain radical rings with application to cryptography*, supervisor: A. Canonaco, co-supervisor: M. Calderini
-- Bachelor's in Mathematics (2017-2020) at University of Pavia: 110/110 cum laude; thesis: *Asymptotic Results for Goldbach's Conjecture*, supervisor: A. Canonaco
+- Advanced Master's in Science and Technology at IUSS Pavia (2020-2023): 100/100 cum laude; thesis: *Multiplication polynomials for elliptic curves over finite local rings* ([pdf](/assets/mate/talks/tesi_iuss.pdf)), supervisor: D. Taufer
+- Master's in Mathematics (2020-2022) at University of Pavia: 110/110 cum laude; thesis: *On the automorphism groups of certain radical rings with application to cryptography* ([pdf](/assets/mate/talks/tesi_master.pdf)), supervisor: A. Canonaco, co-supervisor: M. Calderini
+- Bachelor's in Mathematics (2017-2020) at University of Pavia: 110/110 cum laude; thesis: *Asymptotic Results for Goldbach's Conjecture* ([pdf](/assets/mate/talks/tesi_bach.pdf)), supervisor: A. Canonaco
 
 ## Awards
 
