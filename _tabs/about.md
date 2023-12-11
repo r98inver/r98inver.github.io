@@ -5,10 +5,7 @@ order: 1
 toc: true
 ---
 
-Hi! My name is Riccardo Invernizzi and I'm currently a *PhD Student* at KU Leuven. 
-{% comment %}
-I'm supervised by Prof. [F. Mohammadi](https://www.fatemehmohammadi.com/){:target="_blank"} and co-supervised by [D. Taufer](https://sites.google.com/view/danieletaufer){:target="_blank"}.      
-{% endcomment %}
+Hi! My name is Riccardo Invernizzi and I'm currently a *PhD Student* at KU Leuven.    
 I am interested in number theory, combinatorics and polynomial systems both from theoretical and algorithmic pureviews.  
 
 The most important points of my academic career are summarized below. 
@@ -17,7 +14,7 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 
 ## Contacts
 
-- Email: `name.surname@kuleuven.be`
+- Email: `nidadoni[at]gmail[dot]com`
 - ORCiD: [0000-0002-2271-6822](https://orcid.org/0000-0002-2271-6822){:target="_blank"}
 - [Google Scholar](https://scholar.google.com/citations?user=tJQkJIUAAAAJ&hl=en){:target="_blank"}
 - [arxiv](https://arxiv.org/a/invernizzi_r_1.html){:target="_blank"}
@@ -59,7 +56,7 @@ I also enjoy playing coding competition of various kind, mainly CTF's and compet
 
 ## Academic Career
 
-- PhD (2023 - present) at KU Leuven; supervisor: [F. Mohammadi](https://www.fatemehmohammadi.com/){:target="_blank"}, co-supervisor: [D. Taufer](https://sites.google.com/view/danieletaufer){:target="_blank"}
+- PhD (2023 - present) at KU Leuven;
 - Research Internship (2022-2023) at KU Leuven; supervisor: [D. Taufer](https://sites.google.com/view/danieletaufer){:target="_blank"} / [F. Mohammadi](https://www.fatemehmohammadi.com/){:target="_blank"}
 - Research Internship (2022) at TU Munich; supervisor: [V. Weger](https://www.ce.cit.tum.de/en/lnt/people/senior-researchers/weger/){:target="_blank"}
 - Advanced Master's in Science and Technology at IUSS Pavia (2020-2023): 100/100 cum laude; thesis: *Multiplication polynomials for elliptic curves over finite local rings* ([pdf](/assets/mate/talks/tesi_iuss.pdf)), supervisor: D. Taufer

@@ -2,7 +2,7 @@
 title: DeadSec CTF - Loud(s)
 date: 2023-05-21 13:00:00
 categories: [Ctf Writeups, Crypto]
-tags: [crt, coppersmith method] # TAG names should always be lowercase
+tags: [crt, coppersmith] # TAG names should always be lowercase
 math: true
 ---
 
