@@ -2,7 +2,7 @@
 title: LakeCTF - keyshare
 date: 2023-11-05 18:00:00
 categories: [Ctf Writeups, Crypto]
-tags: [ecc, invalid curve] # TAG names should always be lowercase
+tags: [ecc, dlog, invalid curve] # TAG names should always be lowercase
 math: true
 ---
 
