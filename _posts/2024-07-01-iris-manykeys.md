@@ -123,3 +123,6 @@ To recap, what we do is:
 
 > The full solution script can be found [here](https://gist.github.com/r98inver/cab8a0a20c55ad1dce53526b48f328d0).
 {: .prompt-tip }
+
+> After the CTF I've been told that the solution is much easier than this; you can just change the generator in a way that the signature equation is verified. This is described for instance in [problem 61](https://cryptopals.com/sets/8/challenges/61.txt) of Cryptopals. 
+{: .prompt-warning }
