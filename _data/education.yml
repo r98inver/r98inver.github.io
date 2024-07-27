@@ -1,0 +1,38 @@
+entries:
+  - title: phd at KU Leuven (2024-present)
+    entries:
+      - title: supervisors
+        entries:
+          - title: Frederik Vercauteren
+            url: https://www.esat.kuleuven.be/cosic/people/person/?u=u0031924
+          - title: Wouter Castryck
+            url: https://homes.esat.kuleuven.be/~wcastryc/
+  - title: research internship at KU Leuven (2022-2023)
+    entries:
+      - title: supervisor
+        entries:
+          - title: Daniele Taufer
+            url: https://sites.google.com/view/danieletaufer
+  - title: research internship at TU Munich (2022)
+    entries:
+      - title: supervisor
+        entries:
+          - title: Violetta Weger
+            url: https://www.ce.cit.tum.de/en/lnt/people/senior-researchers/weger/
+  - title: advanced master's at IUSS Pavia (2020-2023)
+    entries:
+      - title: thesis
+        url: /talks/tesi_iuss.pdf
+  - title: master's in mathematics at University of Pavia (2020-2022)
+    entries:
+      - title: thesis
+        url: /talks/tesi_master.pdf
+  - title: bachelor's in mathematics at University of Pavia (2017-2020)
+    entries:
+      - title: thesis
+        url: /talks/tesi_bach.pdf
+
+  # Awards
+  # - title: Bernasconi award (2022)
+  # - title: IUSS scolarship (2020-2022)
+  # - title: Felice Casorati scolarship (2020-2022)

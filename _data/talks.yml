@@ -1,0 +1,18 @@
+entries:
+  - title: Optimal S-boxes against alternative operations
+    entries:
+      - title: WCC, Perugia - 2024-06
+      - title: slides
+        url: /talks/2406_wcc.pdf
+
+  - title: Multiplication polynomials for elliptic curves over finite local rings
+    entries:
+      - title: ISSAC, Tromso - 2023-07
+      - title: slides
+        url: /talks/2307_mulpoly.pdf
+
+  - title: Linear Convex Optimization with Gurobi
+    entries:
+      - title: KU Leuven - 2023-04
+      - title: files
+        url: /talks/2304_gurobi.zip

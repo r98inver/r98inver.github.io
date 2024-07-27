@@ -1,0 +1,13 @@
+entries:
+  - title: research
+    entries:
+      - title: papers
+        url: papers
+      - title: talks
+        url: talks
+  - title: info
+    entries:
+      - title: contacts
+        url: contacts
+      - title: education
+        url: education

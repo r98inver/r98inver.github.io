@@ -1,0 +1,18 @@
+entries:
+  - title: Optimal S-boxes against alternative operations (with M. Calderini and R. Civino)
+    entries:
+      - title: WCC 2024 / arxiv&colon; 2403.20059
+      - title: pdf
+        url: /papers/2406_optsbox.pdf
+  - title: Differential experiments using parallel alternative operations (with M. Calderini and R. Civino)
+    entries:
+      - title: Journal of Mathematical Cryptology / arxiv&colon; 2401.04495
+      - title: pdf
+        url: /papers/2401_diffexp.pdf
+  - title: Multiplication polynomials for elliptic curves over finite local rings (with D. Taufer)
+    entries:
+      - title: ISSAC 2023 / arxiv&colon; 2302.03650
+      - title: pdf
+        url: /papers/2302_mulpoly.pdf
+      - title: code
+        url: https://github.com/r98inver/ec-local-rings
