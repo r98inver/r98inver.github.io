@@ -1,7 +1,7 @@
 title: "Riccardo Invernizzi" # name of the site
 author: Riccardo Invernizzi # name of site's author
 email: riccardo.invernizzi@esat.kuleuven.be # email of site's author
-url: https://riggraz.dev # root address of the site
+url: https://r98inver.github.io # root address of the site
 baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
 
 permalink: /:slug.html
