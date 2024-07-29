@@ -1,0 +1,12 @@
+<ol reversed>
+  {%-for item in include.collection-%}
+    <li>
+    <b>{{ item.title }}</b><br>
+    {{ item.authors }} {% if item.jounrnal %} - <i> {{ item.journal }} </i> {% endif %} ({{ item.year }})<br>
+    {% if item.pdf %}<a href="/papers/{{ item.pdf }}">pdf</a>{% endif %}
+    {% if item.arxiv %}<a href="https://arxiv.org/abs/{{ item.arxiv }}">arxiv</a>{% endif %}
+    {% if item.eprint %}<a href="https://eprint.iacr.org/{{ item.eprint }}">eprint</a>{% endif %}
+    {% if item.code %}<a href="{{ item.code }}">code</a>{% endif %}
+    </li>
+  {%-endfor-%}
+</ol>
