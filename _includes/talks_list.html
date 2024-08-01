@@ -1,4 +1,4 @@
-<ol reversed>
+<ul reversed>
   {%-for item in include.collection-%}
     <li>
     <b>{{ item.title }}</b><br>
@@ -7,4 +7,4 @@
     {% if item.code %}<a href="{{ item.code }}">code</a>{% endif %}
     </li>
   {%-endfor-%}
-</ol>
+</ul>

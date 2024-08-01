@@ -12,4 +12,4 @@ PhD student in isogenies and post quantum cryptography at KU Leuven, supervised 
 
 <hr>
 
-<i>Website forked from <a href="https://github.com/riggraz/no-style-please">no-style-please</a> and inspired by <a href="https://yx7.cc/">y7z.cc</a></i>
+<i>Website forked from <a href="https://github.com/riggraz/no-style-please">no-style-please</a> and inspired to <a href="https://yx7.cc/">y7z.cc</a></i>
