@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: en }}">
+  <meta http-equiv="refresh" content="1; URL=/" />
+  <title>
+    {%- if page.title -%}
+      {{ page.title }} - {{ site.title }}
+    {%- else -%}
+      {{ site.title }}
+    {%- endif -%}
+  </title>
+
+  {%-seo title=false-%}
+  {%-feed_meta-%}
+</html>
