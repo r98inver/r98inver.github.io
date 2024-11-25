@@ -1,4 +1,9 @@
 entries:
+  - title: SQIsign2D-East&colon; A New Signature Scheme Using 2-dimensional Isogenies
+    authors: K. Nakagawa, H. Onuki, W. Castryck, M. Chen, R. Invernizzi, G. Lorenzon, F. Vercauteren
+    journal: Asiacrypt 2024 (to appear)
+    year: 2024
+  
   - title: Optimal S-boxes against alternative operations
     authors: M. Calderini, R. Civino, R. Invernizzi
     journal: WCC 2024

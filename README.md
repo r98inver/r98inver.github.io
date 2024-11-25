@@ -4,11 +4,15 @@ Forked from [no-style-please](https://github.com/riggraz/no-style-please)
 
 ## Installation
 
-    $ bundle install
-    $ bundle add webrick
-    $ bundle exec jekyll s
+- install dependencies: `sudo apt install ruby-dev ruby-bundler`
+- create writable dir: `mkdir ~/.bundle_install`
+- `bundle install`
+- `bundle exec jekyll s`
 
-Note: `webrick` is needed for Ruby 3.0 (see [here](https://github.com/jekyll/jekyll/issues/8523)) and should probably be added somewhere.
+## Quick usage
+
+- To add a paper/preprint/talk: go to `_data` and modify the corresponding `yml` file
+- Save pdf or other files in the corresponding directory
 
 ## Features
 
