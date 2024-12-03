@@ -6,7 +6,7 @@ layout: default
   <h1>{{ site.title }}</h1>
 </header>
 
-PhD student in isogenies and post quantum cryptography at KU Leuven, supervised by Frederik Vercauteren and Wouter Castrick.
+PhD student in isogenies and post quantum cryptography at KU Leuven, supervised by Frederik Vercauteren and Wouter Castryk.
 
 {% include menu_item.html collection=site.data.menu.entries %}
 
