@@ -5,8 +5,9 @@
     <i>{{ item.venue }}</i>,
     {% if item.city %} {{ item.city }} ({{ item.country }}),{% endif %}
     {{ item.date }}<br>
-    {% if item.slides %}<a href="/talks/{{ item.slides }}">slides</a>{% endif %}
-    {% if item.code %}<a href="{{ item.code }}">code</a>{% endif %}
+    {% if item.slides %}<a href="/talks/{{ item.slides }}" target="_blank">slides</a>{% endif %}
+    {% if item.code %}<a href="{{ item.code }}" target="_blank">code</a>{% endif %}
+    {% if item.recording %}<a href="{{ item.recording }}" target="_blank">recording</a>{% endif %}
     </li>
   {%-endfor-%}
 </ul>
