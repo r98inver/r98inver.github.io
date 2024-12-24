@@ -1,7 +1,7 @@
 entries:
   - title: SQIsign2D-East&colon; A New Signature Scheme Using 2-dimensional Isogenies
     authors: K. Nakagawa, H. Onuki, W. Castryck, M. Chen, R. Invernizzi, G. Lorenzon, F. Vercauteren
-    journal: Asiacrypt 2024 (to appear)
+    journal: Asiacrypt 2024
     year: 2024
   
   - title: Optimal S-boxes against alternative operations
@@ -18,7 +18,7 @@ entries:
     arxiv: "2401.04495"
     pdf: 2401_diffexp.pdf
 
-  - title: Multiplication polynomials for elliptic curves over finite local rings (with D. Taufer)
+  - title: Multiplication polynomials for elliptic curves over finite local rings
     authors: R. Invernizzi, D. Taufer
     year: 2023
     journal: ISSAC 2023
