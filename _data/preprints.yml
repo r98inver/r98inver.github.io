@@ -1,1 +1,7 @@
-
+entries:
+  - title: PEGASIS&colon; Practical Effective Class Group Action using 4-Dimensional Isogenies
+    authors: P. Dartois, J. K. Eriksen, T. B. Fouotsa, A. H. Le Merdy, R. Invernizzi, D. Robert, R. Rueger, F. Vercauteren, B. Wesolowski
+    pdf: 2503_pegasis.pdf
+    eprint: "2025/401"
+    year: 2025
+    code: https://github.com/pegasis4d/pegasis
