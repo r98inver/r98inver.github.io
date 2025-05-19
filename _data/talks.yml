@@ -1,10 +1,15 @@
 entries:
+  - title: PRISM - Signatures from large prime degree isogenies
+    venue: PKC
+    date: 14 May 2025
+    slides: 2505_pkc.pdf
+
   - title: PRISM - PRime degree ISogeny Mechanism
     venue: Isogeny Club - Season 5
     date: 3 December 2024
     slides: 2412_isoclub.pdf
     recording: https://www.youtube.com/watch?v=YUMc5kOIACg
-  
+
   - title: Optimal S-boxes against alternative operations
     venue: WCC
     city: Perugia
