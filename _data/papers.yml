@@ -1,11 +1,19 @@
 entries:
+  - title: Orient Express&colon; Using Frobenius to Express Oriented Isogenies
+    authors: W. Castryck, R. Invernizzi, G. Lorenzon, J. Meers, F. Vercauteren
+    pdf: 2506_orientexpr.pdf
+    eprint: "2025/1047"
+    year: 2025
+    code: https://github.com/KULeuven-COSIC/OrientExpress
+    journal: Latincrypt 2025
+
   - title: PEGASIS&colon; Practical Effective Class Group Action using 4-Dimensional Isogenies
     authors: P. Dartois, J. K. Eriksen, T. B. Fouotsa, A. H. Le Merdy, R. Invernizzi, D. Robert, R. Rueger, F. Vercauteren, B. Wesolowski
     pdf: 2503_pegasis.pdf
     eprint: "2025/401"
     year: 2025
     code: https://github.com/pegasis4d/pegasis
-    journal: (Accepted at) CRYPTO 2025
+    journal: CRYPTO 2025
 
   - title: PRISM&colon; Simple And Compact Identification and Signatures From Large Prime Degree Isogenies
     authors: A. Basso, G. Borin, W. Castryck, M. Corte-Real Santos, R. Invernizzi, A. Leroux, L. Maino, F. Vercauteren, B. Wesolowski

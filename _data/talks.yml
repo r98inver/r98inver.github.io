@@ -1,4 +1,9 @@
 entries:
+  - title: PEGASIS&colon; Practical Effective Class Group Action
+    venue: Crypto
+    date: 18 Aug 2025
+    slides: 2508_crypto.pdf
+
   - title: PRISM - Signatures from large prime degree isogenies
     venue: PKC
     date: 14 May 2025
