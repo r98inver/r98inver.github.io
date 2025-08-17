@@ -3,7 +3,6 @@ entries:
     authors: W. Castryck, R. Invernizzi, G. Lorenzon, J. Meers, F. Vercauteren
     pdf: 2506_orientexpr.pdf
     eprint: "2025/1047"
-    year: 2025
     code: https://github.com/KULeuven-COSIC/OrientExpress
     journal: Latincrypt 2025
 
@@ -11,7 +10,6 @@ entries:
     authors: P. Dartois, J. K. Eriksen, T. B. Fouotsa, A. H. Le Merdy, R. Invernizzi, D. Robert, R. Rueger, F. Vercauteren, B. Wesolowski
     pdf: 2503_pegasis.pdf
     eprint: "2025/401"
-    year: 2025
     code: https://github.com/pegasis4d/pegasis
     journal: CRYPTO 2025
 
@@ -19,7 +17,6 @@ entries:
     authors: A. Basso, G. Borin, W. Castryck, M. Corte-Real Santos, R. Invernizzi, A. Leroux, L. Maino, F. Vercauteren, B. Wesolowski
     pdf: 2501_prism.pdf
     eprint: "2025/135"
-    year: 2025
     code: https://github.com/KULeuven-COSIC/PRISM
     journal: PKC 2025
 
@@ -28,14 +25,14 @@ entries:
     journal: Asiacrypt 2024
     pdf: 2412_sqisigneast.pdf
     doi: https://doi.org/10.1007/978-981-96-0891-1_9
-    year: 2024
+    code: https://github.com/hiroshi-onuki/SQIsign2D-East.jl
 
   - title: Optimal S-boxes against alternative operations
     authors: M. Calderini, R. Civino, R. Invernizzi
     journal: WCC 2024
-    year: 2024
     pdf: 2406_optsbox.pdf
     arxiv: "2403.20059"
+    code: https://github.com/KULeuven-COSIC/alternative-differential-cryptanalysis
 
   - title: Differential experiments using parallel alternative operations
     authors: M. Calderini, R. Civino, R. Invernizzi
@@ -46,7 +43,6 @@ entries:
 
   - title: Multiplication polynomials for elliptic curves over finite local rings
     authors: R. Invernizzi, D. Taufer
-    year: 2023
     journal: ISSAC 2023
     arxiv: "2302.03650"
     pdf: 2302_mulpoly.pdf
