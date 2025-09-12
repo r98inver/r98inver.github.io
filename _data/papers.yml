@@ -1,4 +1,11 @@
 entries:
+  - title: Qlapoti&colon; Simple and Efficient Translation of Quaternion Ideals to Isogenies
+    authors: G. Borin, M. Corte-Real Santos, J. K. Eriksen, R. Invernizzi, M. Mula, S. Schaeffler, F. Vercauteren
+    pdf: 2509_qlapoti.pdf
+    eprint: "2025/1604"
+    code: https://github.com/KULeuven-COSIC/Qlapoti
+    journal: Asiacrypt 2025
+
   - title: Orient Express&colon; Using Frobenius to Express Oriented Isogenies
     authors: W. Castryck, R. Invernizzi, G. Lorenzon, J. Meers, F. Vercauteren
     pdf: 2506_orientexpr.pdf
