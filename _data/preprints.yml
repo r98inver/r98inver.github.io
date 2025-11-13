@@ -1,4 +1,9 @@
 entries:
+  - title: Leveled Isogeny Problems with Hints
+    authors: S. Das, R. Invernizzi, P. Kutas, J. Meers
+    pdf: 2511_leaks.pdf
+    eprint: "2025/2075"
+    code: https://github.com/KULeuven-COSIC/liph
   - title: qt-Pegasis&colon; Simpler and Faster Effective Class Group Actions
     authors: P. Dartois, J. K. Eriksen, R. Invernizzi, F. Vercauteren
     pdf: 2510_qtp.pdf
