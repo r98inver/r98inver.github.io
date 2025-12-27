@@ -47,6 +47,7 @@ entries:
     journal: Journal of Mathematical Cryptology
     arxiv: "2401.04495"
     pdf: 2401_diffexp.pdf
+    doi: https://doi.org/10.1515/jmc-2023-0030
 
   - title: Multiplication polynomials for elliptic curves over finite local rings
     authors: R. Invernizzi, D. Taufer
@@ -54,3 +55,4 @@ entries:
     arxiv: "2302.03650"
     pdf: 2302_mulpoly.pdf
     code: https://github.com/r98inver/ec-local-rings
+    doi: https://doi.org/10.1145/3597066.3597068
