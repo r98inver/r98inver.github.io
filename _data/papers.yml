@@ -12,6 +12,7 @@ entries:
     eprint: "2025/1047"
     code: https://github.com/KULeuven-COSIC/OrientExpress
     journal: Latincrypt 2025
+    doi: https://doi.org/10.1007/978-3-032-06754-8_6
 
   - title: PEGASIS&colon; Practical Effective Class Group Action using 4-Dimensional Isogenies
     authors: P. Dartois, J. K. Eriksen, T. B. Fouotsa, A. H. Le Merdy, R. Invernizzi, D. Robert, R. Rueger, F. Vercauteren, B. Wesolowski
@@ -19,6 +20,7 @@ entries:
     eprint: "2025/401"
     code: https://github.com/pegasis4d/pegasis
     journal: CRYPTO 2025
+    doi: https://doi.org/10.1007/978-3-032-01855-7_3
 
   - title: PRISM&colon; Simple And Compact Identification and Signatures From Large Prime Degree Isogenies
     authors: A. Basso, G. Borin, W. Castryck, M. Corte-Real Santos, R. Invernizzi, A. Leroux, L. Maino, F. Vercauteren, B. Wesolowski
@@ -26,13 +28,14 @@ entries:
     eprint: "2025/135"
     code: https://github.com/KULeuven-COSIC/PRISM
     journal: PKC 2025
+    doi: https://doi.org/10.1007/978-3-031-91826-1_10
 
   - title: SQIsign2D-East&colon; A New Signature Scheme Using 2-dimensional Isogenies
     authors: K. Nakagawa, H. Onuki, W. Castryck, M. Chen, R. Invernizzi, G. Lorenzon, F. Vercauteren
     journal: Asiacrypt 2024
     pdf: 2412_sqisigneast.pdf
-    doi: https://doi.org/10.1007/978-981-96-0891-1_9
     code: https://github.com/hiroshi-onuki/SQIsign2D-East.jl
+    doi: https://doi.org/10.1007/978-981-96-0891-1_9
 
   - title: Optimal S-boxes against alternative operations and linear propagation
     authors: M. Calderini, R. Civino, R. Invernizzi
@@ -40,6 +43,7 @@ entries:
     pdf: 2406_optsbox.pdf
     arxiv: "2403.20059"
     code: https://github.com/KULeuven-COSIC/alternative-differential-cryptanalysis
+    doi: https://doi.org/10.1016/j.disc.2025.114870
 
   - title: Differential experiments using parallel alternative operations
     authors: M. Calderini, R. Civino, R. Invernizzi
