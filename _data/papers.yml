@@ -34,9 +34,9 @@ entries:
     doi: https://doi.org/10.1007/978-981-96-0891-1_9
     code: https://github.com/hiroshi-onuki/SQIsign2D-East.jl
 
-  - title: Optimal S-boxes against alternative operations
+  - title: Optimal S-boxes against alternative operations and linear propagation
     authors: M. Calderini, R. Civino, R. Invernizzi
-    journal: WCC 2024
+    journal: WCC 2024 and Discrete Mathematics
     pdf: 2406_optsbox.pdf
     arxiv: "2403.20059"
     code: https://github.com/KULeuven-COSIC/alternative-differential-cryptanalysis
