@@ -4,10 +4,10 @@
     <b>{{ item.title }}</b><br>
     {{ item.authors }} {% if item.journal %} - <i> {{ item.journal }} </i> {%
     endif %} {% if item.year %} ({{ item.year }}) {% endif % {% endif %}<br>
-    {% if item.pdf %}<a href="/papers/{{ item.pdf }}">pdf</a>{% endif %}
-    {% if item.arxiv %}<a href="https://arxiv.org/abs/{{ item.arxiv }}">arxiv</a>{% endif %}
-    {% if item.eprint %}<a href="https://eprint.iacr.org/{{ item.eprint }}">eprint</a>{% endif %}
-    {% if item.code %}<a href="{{ item.code }}">code</a>{% endif %}
+    {% if item.pdf %}<a href="/papers/{{ item.pdf }}" target="_blank">pdf</a>{% endif %}
+    {% if item.arxiv %}<a href="https://arxiv.org/abs/{{ item.arxiv }}" target="_blank">arxiv</a>{% endif %}
+    {% if item.eprint %}<a href="https://eprint.iacr.org/{{ item.eprint }}" target="_blank">eprint</a>{% endif %}
+    {% if item.code %}<a href="{{ item.code }}" target="_blank">code</a>{% endif %}
     </li>
   {%-endfor-%}
 </ol>
