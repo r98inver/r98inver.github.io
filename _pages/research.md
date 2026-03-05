@@ -11,6 +11,9 @@ title: research
 ## papers
 {% include papers_list.html collection=site.data.papers.entries %}
 
+## code
+{% include code_list.html collection=site.data.code.entries %}
+
 ## notes
 {% include papers_list.html collection=site.data.notes.entries %}
 
