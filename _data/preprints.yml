@@ -1,6 +1,13 @@
 entries:
+  - title: The Principal Ideal Problem for Endomorphism Rings of Superspecial Abelian Varieties
+    authors: W. Castryck, J. K. Eriksen, R. Invernizzi, F. Vercauteren
+    pdf: 2603_pip.pdf
+    eprint: "2026/454"
+    code: https://github.com/KULeuven-COSIC/PIP
+
   - title: PRISM with a pinch of salt&colon; Simple, Efficient and Strongly Unforgeable Signatures from Isogenies
     authors: A. Basso, G. Borin, W. Castryck, M. Corte-Real Santos, R. Invernizzi, A. Leroux, L. Maino, F. Vercauteren, B. Wesolowski
     pdf: 2603_prism2.pdf
     eprint: "2026/443"
     code: https://github.com/mariascrs/PRISM_v2
+
