@@ -8,11 +8,13 @@ entries:
     venue: Crypto
     date: 18 Aug 2025
     slides: 2508_crypto.pdf
+    recording: https://www.youtube.com/watch?v=mgtTDJhOVL0
 
   - title: PRISM - Signatures from large prime degree isogenies
     venue: PKC
     date: 14 May 2025
     slides: 2505_pkc.pdf
+    recording: https://youtu.be/dljE_63QoMw?t=1074
 
   - title: PRISM - PRime degree ISogeny Mechanism
     venue: Isogeny Club - Season 5
