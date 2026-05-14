@@ -1,4 +1,11 @@
 entries:
+  - title: qt-Pegasis&colon; simpler and faster effective class group actions
+    venue: Eurocrypt
+    date: 12 May 2026
+    city: Roma
+    country: Italy
+    slides: 2605_ec.pdf
+
   - title: Ideal to Isogeny&colon; from Qlapoti to qt-Pegasis
     venue: Isogeny Days
     date: 12 Sep 2025
@@ -7,11 +14,15 @@ entries:
   - title: PEGASIS&colon; Practical Effective Class Group Action
     venue: Crypto
     date: 18 Aug 2025
+    city: Santa Barbara
+    country: California - US
     slides: 2508_crypto.pdf
     recording: https://www.youtube.com/watch?v=mgtTDJhOVL0
 
   - title: PRISM - Signatures from large prime degree isogenies
     venue: PKC
+    city: R&oslash;ros
+    country: Norway
     date: 14 May 2025
     slides: 2505_pkc.pdf
     recording: https://youtu.be/dljE_63QoMw?t=1074
@@ -31,7 +42,7 @@ entries:
 
   - title: Multiplication polynomials for elliptic curves over finite local rings
     venue: ISSAC
-    city: Tromso
+    city: Troms&oslash;
     country: Norway
     date: 27 July 2023
     slides: 2307_mulpoly.pdf
