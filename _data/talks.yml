@@ -1,4 +1,11 @@
 entries:
+  - title: Leveled Isogeny Problems with Hints
+    venue: PKC
+    date: 27 May 2026
+    city: Miami
+    country: Florida - US
+    slides: 2605_pkc.pdf
+
   - title: qt-Pegasis&colon; simpler and faster effective class group actions
     venue: Eurocrypt
     date: 12 May 2026

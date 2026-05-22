@@ -2,6 +2,7 @@
   {%-for item in include.collection-%}
     <li>
     <b>{{ item.title }}</b> - <i>{{ item.description }}</i><br>
+    {% if item.authors %}{{ item.authors }}<br>{% endif %}
     {% if item.github %}<a href="{{ item.github }}" target="_blank">github</a>{% endif %}
     </li>
   {%-endfor-%}

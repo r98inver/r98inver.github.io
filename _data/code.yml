@@ -1,4 +1,5 @@
 entries:
   - title: SQIsign - PRISM v2
+    authors: M. Corte-Real Santos, R. Invernizzi
     description: An unofficial but almost Roud 2 spec-compliant implementation of SQIsign and PRISM in Sage
     github: https://github.com/KULeuven-COSIC/sqisign_prism_v2
