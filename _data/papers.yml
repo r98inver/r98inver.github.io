@@ -5,6 +5,7 @@ entries:
     eprint: "2025/2075"
     code: https://github.com/KULeuven-COSIC/liph
     journal: PKC 2026
+    doi: https://doi.org/10.1007/978-3-032-26737-5
 
   - title: qt-Pegasis&colon; Simpler and Faster Effective Class Group Actions
     authors: P. Dartois, J. K. Eriksen, R. Invernizzi, F. Vercauteren
@@ -12,6 +13,7 @@ entries:
     eprint: "2025/1859"
     code: https://github.com/KULeuven-COSIC/qt-pegasis
     journal: Eurocrypt 2026
+    doi: https://doi.org/10.1007/978-3-032-25333-0
 
   - title: Qlapoti&colon; Simple and Efficient Translation of Quaternion Ideals to Isogenies
     authors: G. Borin, M. Corte-Real Santos, J. K. Eriksen, R. Invernizzi, M. Mula, S. Schaeffler, F. Vercauteren
