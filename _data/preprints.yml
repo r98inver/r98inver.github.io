@@ -1,13 +1,18 @@
 entries:
-  - title: The Principal Ideal Problem for Endomorphism Rings of Superspecial Abelian Varieties
-    authors: W. Castryck, J. K. Eriksen, R. Invernizzi, F. Vercauteren
-    pdf: 2603_pip.pdf
-    eprint: "2026/454"
-    code: https://github.com/KULeuven-COSIC/PIP
+  - title: A Simple and Unified Approach for Proving Knowledge of Isogenies between Abelian Varieties
+    authors: J. K. Eriksen, R. Invernizzi, J. Spiessens, F. Vercauteren
+    pdf: 2606_zkiso.pdf
+    eprint: "2026/1157"
+    code: https://github.com/KULeuven-COSIC/unified_zk_iso
+
+  - title: Isogeny-based Signatures with Randomizable Keys
+    authors: A. Basso, G. Borin, M. Corte-Real Santos, P. Dartois, R. Invernizzi, L. Maino, R. Pedersen, M. Seck
+    pdf: 2606_prismswrk.pdf
+    eprint: "2026/1169"
+    code: https://github.com/giacomoborin/isogeny_swrk
 
   - title: PRISM with a pinch of salt&colon; Simple, Efficient and Strongly Unforgeable Signatures from Isogenies
     authors: A. Basso, G. Borin, W. Castryck, M. Corte-Real Santos, R. Invernizzi, A. Leroux, L. Maino, F. Vercauteren, B. Wesolowski
     pdf: 2603_prism2.pdf
     eprint: "2026/443"
     code: https://github.com/mariascrs/PRISM_v2
-

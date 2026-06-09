@@ -1,4 +1,11 @@
 entries:
+  - title: The Principal Ideal Problem for Endomorphism Rings of Superspecial Abelian Varieties
+    authors: W. Castryck, J. K. Eriksen, R. Invernizzi, F. Vercauteren
+    pdf: 2603_pip.pdf
+    eprint: "2026/454"
+    journal: ANTS 2026
+    code: https://github.com/KULeuven-COSIC/PIP
+
   - title: Leveled Isogeny Problems with Hints
     authors: S. Das, R. Invernizzi, P. Kutas, J. Meers
     pdf: 2511_leaks.pdf
