@@ -1,4 +1,11 @@
 entries:
+  - title: Proving knowledge of isogenies&colon; a unified approach
+    venue: IBM
+    date: 24 Jun 2026
+    city: Zurich
+    country: Switzerland
+    slides: 2606_ibm.pdf
+ 
   - title: Leveled Isogeny Problems with Hints
     venue: PKC
     date: 27 May 2026
