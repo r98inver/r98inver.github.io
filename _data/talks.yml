@@ -1,11 +1,18 @@
 entries:
+  - title: The Principal Ideal Problem for endomorphism rings of superspecial abelian varieties
+    venue: ANTS
+    date: 6 Jul 2026
+    city: Groningen
+    country: The Netherlands
+    slides: 2607_ants.pdf
+
   - title: Proving knowledge of isogenies&colon; a unified approach
     venue: IBM
     date: 24 Jun 2026
     city: Zurich
     country: Switzerland
     slides: 2606_ibm.pdf
- 
+
   - title: Leveled Isogeny Problems with Hints
     venue: PKC
     date: 27 May 2026
