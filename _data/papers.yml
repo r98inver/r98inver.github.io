@@ -1,4 +1,11 @@
 entries:
+  - title: A Simple and Unified Approach for Proving Knowledge of Isogenies between Abelian Varieties
+    authors: J. K. Eriksen, R. Invernizzi, J. Spiessens, F. Vercauteren
+    pdf: 2606_zkiso.pdf
+    eprint: "2026/1157"
+    journal: Asiacrypt 2026
+    code: https://github.com/KULeuven-COSIC/unified_zk_iso
+
   - title: PRISM with a pinch of salt&colon; Simple, Efficient and Strongly Unforgeable Signatures from Isogenies
     authors: A. Basso, G. Borin, W. Castryck, M. Corte-Real Santos, R. Invernizzi, A. Leroux, L. Maino, F. Vercauteren, B. Wesolowski
     pdf: 2607_saltprism.pdf

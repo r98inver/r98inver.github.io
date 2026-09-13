@@ -1,10 +1,4 @@
 entries:
-  - title: A Simple and Unified Approach for Proving Knowledge of Isogenies between Abelian Varieties
-    authors: J. K. Eriksen, R. Invernizzi, J. Spiessens, F. Vercauteren
-    pdf: 2606_zkiso.pdf
-    eprint: "2026/1157"
-    code: https://github.com/KULeuven-COSIC/unified_zk_iso
-
   - title: Isogeny-based Signatures with Randomizable Keys
     authors: A. Basso, G. Borin, M. Corte-Real Santos, P. Dartois, R. Invernizzi, L. Maino, R. Pedersen, M. Seck
     pdf: 2606_prismswrk.pdf
